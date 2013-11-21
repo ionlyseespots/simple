@@ -1,1 +1,1 @@
-This is a angular wireframe for the perspective of a designer.
+This is a responsive angular wireframe built by a designer, for a designer.

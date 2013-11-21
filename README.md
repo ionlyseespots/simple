@@ -1,1 +1,1 @@
-Howdy
+This is a angular wireframe for the perspective of a designer.

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Howdy</title>
+    <title>Demo</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js" type="text/javascript"></script>
 
 </head>
 <body>
-<section ng-controller='HowdyCtrl' ng-app='HowdyApp'>
+<section ng-controller='DemoCtrl' ng-app='DemoApp'>
 
     <section class="container">
         <!--- login --->
@@ -19,7 +19,9 @@
             <!--- branding --->
         </section>
         <section class="container-content">
-            {{hello}}
+            <h1>{{hello}}</h1>
+            <h2>{{appVariable}}</h2>
+            <h3>{{appController}}</h3>
             <!--- ng view --->
         </section>
         <section>
@@ -30,7 +32,7 @@
 </section>
 
 <script src="js/app.js" type="text/javascript"></script>
-<script src="js/controllers/HowdyCtrl.js" type="text/javascript"></script>
+<script src="js/controllers/DemoCtrl.js" type="text/javascript"></script>
 
 
 </body>

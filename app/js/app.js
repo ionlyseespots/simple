@@ -1,3 +1,3 @@
-var Howdy = {};
+var Demo = {};
 
-Howdy.app = angular.module('HowdyApp',[]);
+Demo.app = angular.module('DemoApp',[]);

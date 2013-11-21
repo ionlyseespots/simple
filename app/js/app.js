@@ -1,3 +1,3 @@
-var FrontDoor = {};
+var Howdy = {};
 
-FrontDoor.app = angular.module('FrontDoorApp',[]);
+Howdy.app = angular.module('HowdyApp',[]);

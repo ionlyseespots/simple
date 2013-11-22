@@ -1,1 +1,1 @@
-This is a responsive angular wireframe built by a designer, for a designer.
+Howdy! is a designer orientated (work in progress) HTML5/AngularJS front-end wire frame built from the ground up.

@@ -1,1 +1,1 @@
-Howdy! is a designer orientated (work in progress) HTML5/AngularJS front-end wire frame built from the ground up.
+A designer orientated (work in progress) HTML5/AngularJS front-end wire frame built from the ground up.

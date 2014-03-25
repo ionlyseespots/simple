@@ -1,35 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Demo</title>
-    <!-- Include AngularJS from Google's CDN -->
+    <title>simple edit</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js" type="text/javascript"></script>
 
+    <link rel="stylesheet" href="css/bootstrap-451.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
 </head>
 <body>
 <section ng-controller='DemoCtrl' ng-app='DemoApp'>
 
-    <section class="container">
-        <!--- login --->
-    </section>
-    <section id="content">
-        <section>
-            <!--- nav --->
+    <section class="row">
+        <section class="row view-phone" style="display: block;position: relative;">
+            <div class="col-md-12" style="position: fixed; z-index: 999999;top: 15px; right: 10px;  padding: 0 0 15px;width: 568px; border: 1px solid #d6d6d6;">
+                <section id="navbar">
+                    <section class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-default" role="navigation" style="margin: 0;">
+                                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="">Link</a></li>
+                                        <li><a href="">Link</a></li>
+                                        <li class="dropdown">
+                                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="">Action</a></li>
+                                                <li><a href="">Another action</a></li>
+                                                <li><a href="">Something else here</a></li>
+                                                <li><a href="">Separated link</a></li>
+                                                <li><a href="">One more separated link</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="">Link</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </section>
+                </section>
+                <section class="jumbotron" style="padding: 0; margin: 0 0 10px 0;">
+                    <div class="text-center">
+                        <h3>
+                            Company - jumbotron
+                        </h3>
+                    </div>
+                </section>
+                <section class="col-xs-12">
+                    <section class="well text-center">
+                        <p>Category/Product - well</p>
+                    </section>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Panel primary</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="col-xs-4">
+                                <p>
+                                    text
+                                </p>
+                            </div>
+                            <div class="col-xs-4">
+                                <p class="text-primary">
+                                    primary text
+                                </p>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href>
+                                    link
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Panel default with button examples</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-xs-6">
+                                <btn class="btn btn-default btn-block">Default</btn>
+                                <btn class="btn btn-primary btn-block">Primary</btn>
+                                <btn class="btn btn-info btn-block">Info</btn>
+                            </div>
+                            <div class="col-xs-6">
+                                <btn class="btn btn-success btn-block">Success</btn>
+                                <btn class="btn btn-warning btn-block">Warning</btn>
+                                <btn class="btn btn-danger btn-block">Danger</btn>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            Panel footer
+                        </div>
+                    </div>
+                </section>
+            </div>
         </section>
-        <section>
-            <!--- branding --->
-        </section>
-        <section class="container-content">
-            <h1>{{hello}}</h1>
-            <p>{{hello}} is a designer orientated (work in progress) HTML5/AngularJS front-end wire frame built from the ground up.</p>
-            <p>{{hello}} is a $scope variable with a string assigned to say "Howdy!"</p>
-            <h2>{{appVariable}}</h2>
-            <h3>{{appController}}</h3>
-            <!--- ng view --->
-        </section>
-        <section>
-            <!--- error --->
-        </section>
+    </section><script>
+    setTimeout( function () {
+        $('.dropdown-toggle').dropdown();
+    }, 0);
+</script>
+
+
+        <!--<section class="container-content">-->
+            <!--<h1>{{hello}}</h1>-->
+            <!--<p>{{hello}} is a designer orientated (work in progress) HTML5/AngularJS front-end wire frame built from the ground up.</p>-->
+            <!--<p>{{hello}} is a $scope variable with a string assigned to say "Howdy!"</p>-->
+            <!--<h2>{{appVariable}}</h2>-->
+            <!--<h3>{{appController}}</h3>-->
+        <!--</section>-->
     </section>
 
 </section>

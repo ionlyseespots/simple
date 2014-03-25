@@ -1,8 +1,26 @@
 Demo.app.controller("DemoCtrl", function($scope){
 
 
-    $scope.hello = "Howdy!";
-    $scope.appVariable = "The file app.js is telling AngularJS that it should render this page as an application called DemoApp and assigning it to the app variable.";
-    $scope.appController = "The file DemoCtrl.js is assigning a main controller called DemoCtrl to DemoApp.";
+    $scope.hello = "0";
+    $scope.appVariable = "1";
+    $scope.appController = "2";
 
+// css default values
+    $scope.customizations = [
+        {
+            "name":         "Primary button color",
+            "class":        ".btn-primary",
+            "property":     "bg-color",
+            "value":        "#3d3d3d"
+        },
+        {
+            "name":     "Default button color",
+            "class":    ".btn-default",
+            "type":     "bg-color",
+            "value":    "#ffffff"
+        }
+    ];
+    $scope.save = function() {
+        $scope.msg = 'CSS to save: '+ JSON.stringify($scope.customizations);
+    };
 });

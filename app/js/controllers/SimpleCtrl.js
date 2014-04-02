@@ -1,44 +1,66 @@
 Simple.app.controller("SimpleCtrl", function($scope){
 
-
-    $scope.hello = "0";
-    $scope.appVariable = "1";
-    $scope.appController = "2";
-
 // css default values
+    $scope.navs = [
+        {
+            "name":             "Primary text",
+            "class":            "text-primary",
+            "property":         "color",
+            "value":            "#0C2A3A"
+        },
+        {
+            "name":             "Info text",
+            "class":            "text-info",
+            "property":         "color",
+            "value":            "#31708F"
+        },
+        {
+            "name":             "Link text",
+            "parentelement":    "body",
+            "element":          "a",
+            "property":         "color",
+            "value":            "#0C2A3A"
+        }
+    ];
 
-    $scope.customizations = [
+    $scope.scaffolding = [
+        {
+            "name":             "Primary text",
+            "class":            "text-primary",
+            "property":         "color",
+            "value":            "#0C2A3A"
+        },
+        {
+            "name":             "Info text",
+            "class":            "text-info",
+            "property":         "color",
+            "value":            "#31708F"
+        },
+        {
+            "name":             "Link text",
+            "parentelement":    "body",
+            "element":          "a",
+            "property":         "color",
+            "value":            "#0C2A3A"
+        }
+    ];
 
-
+    $scope.panels = [
         {
-            "name":     "Default button",
-            "class":    "btn-default",
-            "type":     "background-color",
-            "value":    "#FFFFFF"
+            "name":             "Panel default",
+            "parentclass":      "panel-default",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "background-color",
+            "value":            "#F5F5F5"
         },
         {
-            "name":     "Info button",
-            "class":    "btn-info",
-            "type":     "background-color",
-            "value":    "#5BC0DE"
-        },
-        {
-            "name":     "Success button",
-            "class":    "btn-success",
-            "type":     "background-color",
-            "value":    "#5CB85C"
-        },
-        {
-            "name":     "Warning button",
-            "class":    "btn-warning",
-            "type":     "background-color",
-            "value":    "#f0ad4e"
-        },
-        {
-            "name":     "Danger button",
-            "class":    "btn-danger",
-            "type":     "background-color",
-            "value":    "#D9534F"
+            "name":             "Panel primary",
+            "parentclass":      "panel-primary",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "background-color",
+            "value":            "#0C2A3A"
         }
     ];
 
@@ -47,13 +69,43 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "name":         "Primary button",
             "class":        "btn-primary",
             "property":     "background-color",
-            "value":        "#3D3D3D"
+            "value":        "#0C2A3A"
+        },
+        {
+            "name":         "Default button",
+            "class":        "btn-default",
+            "property":     "background-color",
+            "value":        "#FFFFFF"
+        },
+        {
+            "name":         "Info button",
+            "class":        "btn-info",
+            "property":     "background-color",
+            "value":        "#5BC0DE"
+        },
+        {
+            "name":         "Success button",
+            "class":        "btn-success",
+            "property":     "background-color",
+            "value":        "#5CB85C"
+        },
+        {
+            "name":         "Warning button",
+            "class":        "btn-warning",
+            "property":     "background-color",
+            "value":        "#f0ad4e"
+        },
+        {
+            "name":         "Danger button",
+            "class":        "btn-danger",
+            "property":     "background-color",
+            "value":        "#D9534F"
         }
     ];
 
 
     $scope.save = function() {
-        $scope.msg = 'CSS to save: '+ JSON.stringify($scope.customizations)+ JSON.stringify($scope.buttons);
+        $scope.msg = 'CSS to save: '+ JSON.stringify($scope.panels)+ JSON.stringify($scope.buttons)+ JSON.stringify($scope.scaffolding);
 
     };
 });

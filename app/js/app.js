@@ -1,3 +1,3 @@
-var Demo = {};
+var Simple = {};
 
-Demo.app = angular.module('DemoApp',[]);
+Simple.app = angular.module('SimpleApp',[]);

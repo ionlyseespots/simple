@@ -1,25 +1,20 @@
 Simple.app.controller("SimpleCtrl", function($scope){
 
 // css default values
-    $scope.navs = [
+    $scope.navbar = [
         {
-            "name":             "Primary text",
-            "class":            "text-primary",
-            "property":         "color",
-            "value":            "#0C2A3A"
+            "name":             "Default background",
+            "class":            "navbar-default",
+            "property":         "background-color",
+            "value":            "#50ACDB"
         },
         {
-            "name":             "Info text",
-            "class":            "text-info",
-            "property":         "color",
-            "value":            "#31708F"
-        },
-        {
-            "name":             "Link text",
-            "parentelement":    "body",
+            "name":             "Active link background",
+            "parentclass":      "navbar-nav",
+            "class":            "active",
             "element":          "a",
-            "property":         "color",
-            "value":            "#0C2A3A"
+            "property":         "background-color",
+            "value":            "#359FD5"
         }
     ];
 
@@ -42,6 +37,21 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "element":          "a",
             "property":         "color",
             "value":            "#0C2A3A"
+        }
+    ];
+
+    $scope.products = [
+        {
+            "name":             "Categories",
+            "class":            "well",
+            "property":         "color",
+            "value":            "#0C2A3A"
+        },
+        {
+            "name":             "Products",
+            "class":            "well",
+            "property":         "color",
+            "value":            "#31708F"
         }
     ];
 

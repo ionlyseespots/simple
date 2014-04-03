@@ -9,7 +9,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#50ACDB"
         },
         {
-            "name":             "Active link background",
+            "name":             "Active background",
             "parentclass":      "navbar-nav",
             "class":            "active",
             "element":          "a",
@@ -79,6 +79,23 @@ Simple.app.controller("SimpleCtrl", function($scope){
         }
     ];
 
+    $scope.jumbotron = [
+        {
+            "name":             "Default background",
+            "class":            "jumbotron",
+            "property":         "background-color",
+            "value":            "#FFFFFF"
+        },
+        {
+            "name":             "Company Name",
+            "class":            "jumbotron",
+            "element":          "h2",
+            "property":         "color",
+            "value":            "#333333"
+        }
+
+    ];
+
     $scope.panels = [
         {
             "name":             "Primary panel",
@@ -118,13 +135,20 @@ Simple.app.controller("SimpleCtrl", function($scope){
     ];
 
     $scope.save = function() {
-        $scope.msg = 'CSS to save: '+ JSON.stringify($scope.panels)+ JSON.stringify($scope.buttons)+ JSON.stringify($scope.scaffolding);
-
+        $scope.msg = 'Theme = '
+            + JSON.stringify($scope.navbar)
+            + JSON.stringify($scope.scaffolding)
+            + JSON.stringify($scope.buttons)
+            + JSON.stringify($scope.jumbotron)
+            + JSON.stringify($scope.panels)
+            + JSON.stringify($scope.wells);
     };
+
     $scope.resetnavbar = angular.copy($scope.navbar);
     $scope.resetscaffolding = angular.copy($scope.scaffolding);
     $scope.resetbuttons = angular.copy($scope.buttons);
     $scope.resetpanels = angular.copy($scope.panels);
+    $scope.resetjumbotron = angular.copy($scope.jumbotron);
     $scope.resetwells = angular.copy($scope.wells);
     $scope.resetColor = function() {
         $scope.navbar = angular.copy($scope.resetnavbar);
@@ -132,6 +156,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.buttons = angular.copy($scope.resetbuttons);
         $scope.panels = angular.copy($scope.resetpanels);
         $scope.wells = angular.copy($scope.resetwells);
+        $scope.jumbotron = angular.copy($scope.resetjumbotron);
         $scope.msg = ""
     };
 

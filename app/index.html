@@ -11,16 +11,14 @@
 </head>
 <body>
 <section class="container" style="width: 760px; margin: 0 auto;">
-
-
-
-        <div class="col-md-5 col-collapse container-simple">
+        <div class="col-md-5 col-collapse">
+            <div class="container-phone">
+            <div class="container-simple">
             <nav ng-repeat="color in navbar | filter: { name: 'Default background' }"  ng-style="{'background-color' : color.value}" class="navbar {{color.class}}" role="navigation">
                 <section>
                     <div class="container">
-
                         <ul class="nav navbar-nav pull-left">
-                            <li ng-repeat="color in navbar | filter: { name: 'Active link background' }" class="{{color.class}}">
+                            <li ng-repeat="color in navbar | filter: { name: 'Active background' }" class="{{color.class}}">
                                 <a href="" ng-style="{'background-color' : color.value}">
                                     <i class="fa fa-home"></i>
                                 </a>
@@ -58,9 +56,9 @@
                 </ul>
             </nav>
 
-            <section class="jumbotron active text-center" style="border-radius: 0;">
-                <h2 class="thumbnail">
-                    <span>Buyer Name</span>
+            <section ng-repeat="color in jumbotron | filter: { name: 'Default background' }" ng-style="{'background-color' : color.value}" class="{{color.class}} active text-center">
+                <h2 ng-repeat="color in jumbotron | filter: { name: 'Company Name' }" ng-style="{'color' : color.value}" class="thumbnail">
+                    <span>{{color.name}}</span>
                 </h2>
             </section>
 
@@ -101,79 +99,79 @@
                     </div>
                 </section>
             </section>
+            </div>
+            </div>
         </div>
 
 
         <div class="col-md-6 col-md-offset-1">
             <form>
-                <div class="row">
-                    <h3 class="text-info">Navigation Bar</h3>
-                    <div ng-repeat="color in navbar">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text" ng-model="color.value" >
+                <div>
+                    <div class="row">
+                        <h2 class="text-primary">Color Editor</h2>
+                    </div>
+                    <div class="row">
+                        <h3 class="text-info">Navigation Bar</h3>
+                        <div ng-repeat="color in navbar">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text" ng-model="color.value" >
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <hr />
-                <div class="row">
-                    <h3 class="text-info">Body</h3>
-                    <div ng-repeat="color in scaffolding">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text" ng-model="color.value" >
+                    <div class="row">
+                        <h3 class="text-info">Branding</h3>
+                        <div ng-repeat="color in jumbotron">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text" ng-model="color.value" >
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <hr />
-                <div class="row">
-                    <h3 class="text-info">Panels</h3>
-                    <div ng-repeat="color in panels">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text" ng-model="color.value" >
+                    <div class="row">
+                        <h3 class="text-info">Text</h3>
+                        <div ng-repeat="color in scaffolding">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text" ng-model="color.value" >
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <hr />
-                <div class="row">
-                    <h3 class="text-info">Wells</h3>
-                    <div ng-repeat="color in wells">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text"  ng-model="color.value" >
+                    <div class="row">
+                        <h3 class="text-info">Panels</h3>
+                        <div ng-repeat="color in panels">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text" ng-model="color.value" >
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <hr />
-                <div class="row">
-                    <h3 class="text-info">Buttons</h3>
-                    <div ng-repeat="color in buttons">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text"  ng-model="color.value" >
+                    <div class="row">
+                        <h3 class="text-info">Products</h3>
+                        <div ng-repeat="color in wells">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text"  ng-model="color.value" >
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <hr />
-                <div class="row">
-                    <button class="btn btn-default" ng-click="save()">
-                        Save
-                    </button>
-                    <button ng-click="resetColor()">Reset</button>
-                    <p>
-                        {{msg}}
-                    </p>
+                    <div class="row">
+                        <h3 class="text-info">Buttons</h3>
+                        <div ng-repeat="color in buttons">
+                            <div class="col-sm-6"  style="margin-top: 5px;">
+                                <label>{{color.name}}</label>
+                                <input colorpicker type="text"  ng-model="color.value" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-default" ng-click="save()">Save</button>
+                        <button class="btn btn-default" ng-click="resetColor()">Reset</button>
+                        <p>{{msg}}</p>
+                    </div>
                 </div>
             </form>
         </div>
-
-
 </section>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

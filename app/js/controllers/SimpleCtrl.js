@@ -133,16 +133,23 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#FFFFFF"
         }
     ];
+	function format(d){
+		angular.forEach(d, function(i){
+			var pc = i.parentclass ? i.parentclass + ' ' : '';
+			$scope.file +=  pc + i.class + ' {' + i.property + ': ' + i.value + '}\r';
+		});
+	}
 
-    $scope.save = function() {
-        $scope.msg = 'Theme = '
-            + JSON.stringify($scope.navbar)
-            + JSON.stringify($scope.scaffolding)
-            + JSON.stringify($scope.buttons)
-            + JSON.stringify($scope.jumbotron)
-            + JSON.stringify($scope.panels)
-            + JSON.stringify($scope.wells);
-    };
+	$scope.save = function() {
+		$scope.file = "";
+		format($scope.navbar);
+		format($scope.scaffolding);
+		format($scope.buttons);
+		format($scope.jumbotron);
+		format($scope.panels);
+		format($scope.wells);
+		console.log($scope.file);
+	};
 
     $scope.resetnavbar = angular.copy($scope.navbar);
     $scope.resetscaffolding = angular.copy($scope.scaffolding);

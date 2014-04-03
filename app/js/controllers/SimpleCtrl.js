@@ -40,40 +40,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
         }
     ];
 
-    $scope.products = [
-        {
-            "name":             "Categories",
-            "class":            "well",
-            "property":         "color",
-            "value":            "#0C2A3A"
-        },
-        {
-            "name":             "Products",
-            "class":            "well",
-            "property":         "color",
-            "value":            "#31708F"
-        }
-    ];
-
-    $scope.panels = [
-        {
-            "name":             "Panel default",
-            "parentclass":      "panel-default",
-            "childclass":       "panel-heading",
-            "class":            "panel-title",
-            "property":         "background-color",
-            "value":            "#F5F5F5"
-        },
-        {
-            "name":             "Panel primary",
-            "parentclass":      "panel-primary",
-            "childclass":       "panel-heading",
-            "class":            "panel-title",
-            "property":         "background-color",
-            "value":            "#0C2A3A"
-        }
-    ];
-
     $scope.buttons = [
         {
             "name":         "Primary button",
@@ -113,18 +79,60 @@ Simple.app.controller("SimpleCtrl", function($scope){
         }
     ];
 
+    $scope.panels = [
+        {
+            "name":             "Primary panel",
+            "parentclass":      "panel-primary",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "background-color",
+            "value":            "#0C2A3A"
+        },
+        {
+            "name":             "Default panel",
+            "parentclass":      "panel-default",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "background-color",
+            "value":            "#F5F5F5"
+        }
+    ];
+
+    $scope.wells = [
+        {
+            "name":             "Category list",
+            "parentclass":      "panel-category-list",
+            "element":          "li",
+            "class":            "well",
+            "property":         "background-color",
+            "value":            "#FFFFFF"
+        },
+        {
+            "name":             "Product list",
+            "parentclass":      "panel-product-list",
+            "element":          "li",
+            "class":            "well",
+            "property":         "background-color",
+            "value":            "#FFFFFF"
+        }
+    ];
 
     $scope.save = function() {
         $scope.msg = 'CSS to save: '+ JSON.stringify($scope.panels)+ JSON.stringify($scope.buttons)+ JSON.stringify($scope.scaffolding);
 
     };
-
-    $scope.colors = angular.copy($scope.buttons);
-
+    $scope.resetnavbar = angular.copy($scope.navbar);
+    $scope.resetscaffolding = angular.copy($scope.scaffolding);
+    $scope.resetbuttons = angular.copy($scope.buttons);
+    $scope.resetpanels = angular.copy($scope.panels);
+    $scope.resetwells = angular.copy($scope.wells);
     $scope.resetColor = function() {
-        $scope.buttons = angular.copy($scope.colors);
+        $scope.navbar = angular.copy($scope.resetnavbar);
+        $scope.scaffolding = angular.copy($scope.resetscaffolding);
+        $scope.buttons = angular.copy($scope.resetbuttons);
+        $scope.panels = angular.copy($scope.resetpanels);
+        $scope.wells = angular.copy($scope.resetwells);
         $scope.msg = ""
-
     };
 
 });

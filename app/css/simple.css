@@ -2,15 +2,6 @@ body {
     background-color: #fafafa;
 }
 
-.row {
-    border-top: 1px solid #d6d6d6;
-    padding-bottom: 15px;
-}
-
-.row:last-child {
-    padding-top: 15px;
-}
-
 .container-phone {
     background-color:#F0F0F0;
     border: 5px solid #444;
@@ -24,12 +15,6 @@ body {
     padding-bottom: 10px;
     position: fixed;
     top: 0;
-}
-
-.container-simple {
-    overflow-y: scroll;
-    height: 550px;
-
 }
 
 .container-phone:after {
@@ -56,6 +41,36 @@ body {
     top: -50px;
     left: 48%;
     z-index: 1;
+}
+
+.container-simple {
+    overflow-y: scroll;
+    height: 550px;
+    width: 320px;
+}
+
+.form-simple {
+    border: 1px solid #d6d6d6;
+    margin: 25px 0;
+    padding: 0 5px;
+}
+
+.form-simple input {
+    color: #777;
+}
+
+.form-simple h3 {
+    margin: 10px 5px;
+}
+
+.form-simple .row {
+    padding: 10px 10px 20px;
+    border-top: 1px solid #d6d6d6;
+}
+
+.form-simple .well {
+    border: 1px solid #d6d6d6;
+    margin: 25px 10px;
 }
 
 /* simple jumbotron is inheriting a border radius somewhere in LESS */

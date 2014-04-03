@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/simple.css">
 </head>
 <body>
-<section class="container" style="width: 760px; margin: 0 auto; position: relative;">
+<section class="container-simple-editor clearfix">
     <div class="col-md-5 col-collapse">
         <div class="container-phone">
             <div class="container-simple">
@@ -81,19 +81,14 @@
                                 </div>
                                 <div class="panel-body">
                                     <p ng-style="{'color' : color.value}" class="{{color.class}}" ng-repeat="color in scaffolding">{{color.name}}</p>
-
                                 </div>
-                                <div class="panel-footer">
-
-                                </div>
+                                <div class="panel-footer"></div>
                            </div>
                         </div>
                         <div ng-repeat="color in buttons">
-                            <div style="margin-top: 5px;">
-                                <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}">
-                                    {{color.name}}
-                                </btn>
-                            </div>
+                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}">
+                                {{color.name}}
+                            </btn>
                         </div>
                     </div>
                 </section>
@@ -135,7 +130,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h3 class="text-info">Text</h3>
+                    <h3 class="text-info">Body</h3>
                     <div ng-repeat="color in scaffolding">
                         <div class="col-sm-6"  style="margin-top: 5px;">
                             <label>{{color.name}}</label>
@@ -164,9 +159,14 @@
                 <div class="row">
                     <h3 class="text-info">Buttons</h3>
                     <div ng-repeat="color in buttons">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
+                        <div class="col-sm-6" style="margin-top: 5px;">
                             <label>{{color.name}}</label>
-                            <input colorpicker type="text"  ng-model="color.value" >
+                            <div class="input-group">
+                                <input colorpicker type="text"  ng-model="color.value" >
+                                <span class="input-group-btn">
+                                     <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
+                                    </span>
+                            </div>
                         </div>
                     </div>
                 </div>

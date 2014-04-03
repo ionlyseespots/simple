@@ -2,6 +2,12 @@ body {
     background-color: #fafafa;
 }
 
+.container-simple-editor {
+    width: 760px;
+    margin: 15px auto;
+    position: relative;
+}
+
 .container-phone {
     background-color:#F0F0F0;
     border: 5px solid #444;
@@ -14,7 +20,6 @@ body {
     box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.35);
     padding-bottom: 10px;
     position: fixed;
-    top: 0;
 }
 
 .container-phone:after {
@@ -49,6 +54,11 @@ body {
     width: 320px;
 }
 
+.container-simple .btn {
+    margin: 5px 0;
+    padding: 15px 0;
+}
+
 .form-simple {
     border: 1px solid #d6d6d6;
     margin: 25px 0;
@@ -57,6 +67,7 @@ body {
 
 .form-simple input {
     color: #777;
+    width: 100%;
 }
 
 .form-simple h3 {
@@ -73,7 +84,7 @@ body {
     margin: 25px 10px;
 }
 
-/* simple jumbotron is inheriting a border radius somewhere in LESS */
+/* simple jumbotron is inheriting a border radius somewhere in compiled LESS */
 .jumbotron {
     border-radius: 0 !important;
 }

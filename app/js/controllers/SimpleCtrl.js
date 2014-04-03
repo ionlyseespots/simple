@@ -118,4 +118,14 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.msg = 'CSS to save: '+ JSON.stringify($scope.panels)+ JSON.stringify($scope.buttons)+ JSON.stringify($scope.scaffolding);
 
     };
+
+    $scope.colors = angular.copy($scope.buttons);
+
+    $scope.resetColor = function() {
+        $scope.buttons = angular.copy($scope.colors);
+        $scope.msg = ""
+
+    };
+
 });
+

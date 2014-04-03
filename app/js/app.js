@@ -1,3 +1,3 @@
 var Simple = {};
 
-Simple.app = angular.module('SimpleApp',[]);
+Simple.app = angular.module('SimpleApp',['colorpicker.module']);

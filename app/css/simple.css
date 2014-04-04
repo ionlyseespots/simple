@@ -81,8 +81,11 @@ body {
 
 .form-simple .well {
     border: 1px solid #d6d6d6;
+    background-color: transparent;
     margin: 25px 10px;
 }
+
+.form-simple .input-group {}
 
 /* simple jumbotron is inheriting a border radius somewhere in compiled LESS */
 .jumbotron {

@@ -42,37 +42,37 @@ Simple.app.controller("SimpleCtrl", function($scope){
 
     $scope.buttons = [
         {
-            "name":         "Primary button",
+            "name":         "Primary",
             "class":        "btn-primary",
             "property":     "background-color",
             "value":        "#0C2A3A"
         },
         {
-            "name":         "Default button",
+            "name":         "Default",
             "class":        "btn-default",
             "property":     "background-color",
             "value":        "#FFFFFF"
         },
         {
-            "name":         "Info button",
+            "name":         "Info",
             "class":        "btn-info",
             "property":     "background-color",
             "value":        "#5BC0DE"
         },
         {
-            "name":         "Success button",
+            "name":         "Success",
             "class":        "btn-success",
             "property":     "background-color",
             "value":        "#5CB85C"
         },
         {
-            "name":         "Warning button",
+            "name":         "Warning",
             "class":        "btn-warning",
             "property":     "background-color",
             "value":        "#f0ad4e"
         },
         {
-            "name":         "Danger button",
+            "name":         "Danger",
             "class":        "btn-danger",
             "property":     "background-color",
             "value":        "#D9534F"

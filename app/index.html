@@ -158,15 +158,14 @@
                 </div>
                 <div class="row">
                     <h3 class="text-info">Buttons</h3>
-                    <div ng-repeat="color in buttons">
-                        <div class="col-sm-6" style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <div class="input-group">
-                                <input colorpicker type="text"  ng-model="color.value" >
-                                <span class="input-group-btn">
-                                     <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
-                                    </span>
-                            </div>
+                    <div ng-repeat="color in buttons" style="margin-top: 5px;padding-left: 5px; padding-right: 5px;">
+                        <label>{{color.name}}</label>
+                        <div class="input-group">
+                            <input colorpicker type="text"  ng-model="color.value" >
+                            <span class="input-group-btn">
+                                 <button colorpicker class="btn btn-default" ng-model="color.text" >border</button>
+                                 <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
+                            </span>
                         </div>
                     </div>
                 </div>

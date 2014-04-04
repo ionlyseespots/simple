@@ -21,7 +21,11 @@ Simple.app.controller("SimpleCtrl", function($scope){
     $scope.scaffolding = [
         {
             "name":             "Default background",
+            "parentclass":      "",
+            "childclass":        "",
+            "parentelement":     "",
             "element":          "body",
+
             "property":         "color",
             "value":            "#F0F0F0"
         },
@@ -39,8 +43,11 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":             "Link text",
+            "parentclass":      "",
+            "childclass":        "",
             "parentelement":    "body",
             "element":          "a",
+
             "property":         "color",
             "value":            "#0C2A3A"
         }
@@ -94,7 +101,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":             "Brand Heading",
-            "class":            "jumbotron",
+            "parentclass":            "jumbotron",
             "element":          "h2",
             "property":         "color",
             "value":            "#333333"
@@ -143,11 +150,12 @@ Simple.app.controller("SimpleCtrl", function($scope){
 
         angular.forEach(d, function(i){
             var dot = ".";
-            var pc = i.parentclass ? i.parentclass + ' ' : '';
-            var cc = i.childclass ? i.childclass + ' ' : '';
+            var pc = i.parentclass ? dot + i.parentclass + ' ' : '';
+            var cc = i.childclass ? dot + i.childclass + ' ' : '';
             var pe = i.parentelement ? i.parentelement + ' ' : '';
             var el = i.element ? i.element + ' ' : '';
-			$scope.file +=  pc + cc + pe + el + dot + i.class + ' {' + i.property + ': ' + i.value + ';}\r';
+            var cl = i.class ? dot + i.class + ' ' : '';
+			$scope.file += pc + cc + pe + el + cl + ' {' + i.property + ': ' + i.value + ';}\r';
 		});
 	}
 

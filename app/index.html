@@ -81,6 +81,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <p ng-style="{'color' : color.value}" class="{{color.class}}" ng-repeat="color in scaffolding" ng-show="!$first">{{color.name}}</p>
+                                    <div class="well"></div>
                                 </div>
                                 <div class="panel-footer"></div>
                            </div>
@@ -175,6 +176,7 @@
                             <span class="input-group-btn">
                                  <button colorpicker class="btn btn-default" ng-model="color.text" >border</button>
                                  <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
+                                  <button colorpicker class="btn btn-default" ng-model="color.text" >hover</button>
                             </span>
                         </div>
                     </div>

@@ -93,7 +93,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#FFFFFF"
         },
         {
-            "name":             "Brand Name",
+            "name":             "Brand Heading",
             "class":            "jumbotron",
             "element":          "h2",
             "property":         "color",

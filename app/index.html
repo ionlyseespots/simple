@@ -56,7 +56,7 @@
                     </ul>
                 </nav>
                 <section ng-repeat="color in jumbotron | filter: { name: 'Default background' }" ng-style="{'background-color' : color.value}" class="{{color.class}} active text-center">
-                    <h2 ng-repeat="color in jumbotron | filter: { name: 'Brand Name' }" ng-style="{'color' : color.value}" class="thumbnail">
+                    <h2 ng-repeat="color in jumbotron | filter: { name: 'Brand Heading' }" ng-style="{'color' : color.value}" class="thumbnail">
                         <span>{{color.name}}</span>
                     </h2>
                 </section>

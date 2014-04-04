@@ -134,9 +134,14 @@ Simple.app.controller("SimpleCtrl", function($scope){
         }
     ];
 	function format(d){
-		angular.forEach(d, function(i){
-			var pc = i.parentclass ? i.parentclass + ' ' : '';
-			$scope.file +=  pc + i.class + ' {' + i.property + ': ' + i.value + '}\r';
+
+        angular.forEach(d, function(i){
+            var dot = ".";
+            var pc = i.parentclass ? i.parentclass + ' ' : '';
+            var cc = i.childclass ? i.childclass + ' ' : '';
+            var pe = i.parentelement ? i.parentelement + ' ' : '';
+            var el = i.element ? i.element + ' ' : '';
+			$scope.file +=  pc + cc + pe + el + dot + i.class + ' {' + i.property + ': ' + i.value + ';}\r';
 		});
 	}
 
@@ -164,7 +169,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.panels = angular.copy($scope.resetpanels);
         $scope.wells = angular.copy($scope.resetwells);
         $scope.jumbotron = angular.copy($scope.resetjumbotron);
-        $scope.msg = ""
     };
 
 });

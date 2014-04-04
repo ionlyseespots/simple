@@ -20,6 +20,12 @@ Simple.app.controller("SimpleCtrl", function($scope){
 
     $scope.scaffolding = [
         {
+            "name":             "Default background",
+            "element":          "body",
+            "property":         "color",
+            "value":            "#F0F0F0"
+        },
+        {
             "name":             "Primary text",
             "class":            "text-primary",
             "property":         "color",
@@ -117,7 +123,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
 
     $scope.wells = [
         {
-            "name":             "Category list",
+            "name":             "Category well",
             "parentclass":      "panel-category-list",
             "element":          "li",
             "class":            "well",
@@ -125,7 +131,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#FFFFFF"
         },
         {
-            "name":             "Product list",
+            "name":             "Product well",
             "parentclass":      "panel-product-list",
             "element":          "li",
             "class":            "well",

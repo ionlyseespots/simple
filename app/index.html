@@ -80,7 +80,7 @@
                                     <h3 ng-style="{'background-color' : color.value}" class="text-center {{color.class}}">{{color.name}}</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <p ng-style="{'color' : color.value}" class="{{color.class}}" ng-repeat="color in scaffolding">{{color.name}}</p>
+                                    <p ng-style="{'color' : color.value}" class="{{color.class}}" ng-repeat="color in scaffolding" ng-show="!$first">{{color.name}}</p>
                                 </div>
                                 <div class="panel-footer"></div>
                            </div>
@@ -114,9 +114,12 @@
                 <div class="row">
                     <h3 class="text-info">Navigation Bar</h3>
                     <div ng-repeat="color in navbar">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
+                        <label>{{color.name}}</label>
+                        <div class="input-group">
                             <input colorpicker type="text" ng-model="color.value" >
+                             <span class="input-group-btn">
+                                 <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
+                             </span>
                         </div>
                     </div>
                 </div>
@@ -141,14 +144,21 @@
                 <div class="row">
                     <h3 class="text-info">Panels</h3>
                     <div ng-repeat="color in panels">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
+
                             <label>{{color.name}}</label>
+                        <div class="input-group">
                             <input colorpicker type="text" ng-model="color.value" >
-                        </div>
+                                            <span class="input-group-btn">
+
+                                 <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
+                            </span>
+                    </div>
+
+
                     </div>
                 </div>
                 <div class="row">
-                    <h3 class="text-info">Products</h3>
+                    <h3 class="text-info">Wells</h3>
                     <div ng-repeat="color in wells">
                         <div class="col-sm-6"  style="margin-top: 5px;">
                             <label>{{color.name}}</label>

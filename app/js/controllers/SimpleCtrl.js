@@ -1,6 +1,5 @@
 Simple.app.controller("SimpleCtrl", function($scope){
-
-// css default values
+// default css
     $scope.navbar = [
         {
             "name":             "Default background",
@@ -9,23 +8,40 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#50ACDB"
         },
         {
+            "name":             "Default text",
+            "parentclass":      "navbar-nav",
+            "element":          "a",
+            "property":         "color",
+            "value":            "#FFFFFF"
+        },
+        {
             "name":             "Active background",
             "parentclass":      "navbar-nav",
             "class":            "active",
-            "element":          "a",
             "property":         "background-color",
+            "value":            "#359FD5"
+        },
+        {
+            "name":             "Active text",
+            "parentclass":      "navbar-nav",
+            "class":            "active",
+            "property":         "color",
+            "value":            "#FFFFFF"
+        },
+        {
+            "name":             "Border",
+            "parentclass":      "navbar-default",
+            "property":         "border-color",
             "value":            "#359FD5"
         }
     ];
-
     $scope.scaffolding = [
         {
             "name":             "Default background",
             "parentclass":      "",
-            "childclass":        "",
-            "parentelement":     "",
+            "childclass":       "",
+            "parentelement":    "",
             "element":          "body",
-
             "property":         "color",
             "value":            "#F0F0F0"
         },
@@ -44,15 +60,13 @@ Simple.app.controller("SimpleCtrl", function($scope){
         {
             "name":             "Link text",
             "parentclass":      "",
-            "childclass":        "",
+            "childclass":       "",
             "parentelement":    "body",
             "element":          "a",
-
             "property":         "color",
             "value":            "#0C2A3A"
         }
     ];
-
     $scope.buttons = [
         {
             "name":         "Primary",
@@ -91,7 +105,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":        "#D9534F"
         }
     ];
-
     $scope.jumbotron = [
         {
             "name":             "Default background",
@@ -101,14 +114,13 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":             "Brand Heading",
-            "parentclass":            "jumbotron",
+            "parentclass":      "jumbotron",
             "element":          "h2",
             "property":         "color",
             "value":            "#333333"
         }
 
     ];
-
     $scope.panels = [
         {
             "name":             "Primary panel",
@@ -127,7 +139,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#F5F5F5"
         }
     ];
-
     $scope.wells = [
         {
             "name":             "Category well",
@@ -158,7 +169,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
 			$scope.file += pc + cc + pe + el + cl + ' {' + i.property + ': ' + i.value + ';}\r';
 		});
 	}
-
 	$scope.save = function() {
 		$scope.file = "";
 		format($scope.navbar);
@@ -169,7 +179,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
 		format($scope.wells);
 		console.log($scope.file);
 	};
-
     $scope.resetnavbar = angular.copy($scope.navbar);
     $scope.resetscaffolding = angular.copy($scope.scaffolding);
     $scope.resetbuttons = angular.copy($scope.buttons);
@@ -184,6 +193,5 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.wells = angular.copy($scope.resetwells);
         $scope.jumbotron = angular.copy($scope.resetjumbotron);
     };
-
 });
 

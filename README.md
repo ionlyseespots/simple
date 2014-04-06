@@ -13,10 +13,10 @@ The idea is a simple framework with a view of Bootstrap on the left-hand side an
 
 Ideas
 
-    ...
+<pre>
     Update framework, look & feel and styles for the basic bootstrap.min.css file
     Add tablet view toggle
     Add type to be editable (type, size, weight, etc)
     Add grid to be editable ie: col-{{device}}-{{size}}
     Add LESS components
-    ...
+</pre>

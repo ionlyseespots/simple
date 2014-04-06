@@ -21,4 +21,4 @@ The idea is a simple framework with a mobile view of Bootstrap on the left-hand 
     Add LESS components
 </pre>
 
-![ScreenShot](https://raw.github.com/ionlyseespots/simple/master/css/img/simple.jpg)
+![ScreenShot](app.css/img/simple.jpg)

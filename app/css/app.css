@@ -1,3 +1,5 @@
+/* cuurrently, app.css inherits many styles from the compiled less bootstrap-451.css file */
+
 body {
     background-color: #fafafa;
 }
@@ -52,6 +54,16 @@ body {
     overflow-y: scroll;
     height: 550px;
     width: 320px;
+}
+
+.container-simple .panel-primary .odd,
+.container-simple .panel-primary span:nth-of-type(4) {
+    display: none;
+}
+
+.container-simple .panel-default .odd,
+.container-simple .panel-default span:nth-of-type(2) {
+    display: none;
 }
 
 .container-simple .btn {

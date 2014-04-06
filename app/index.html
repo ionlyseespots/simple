@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html ng-controller='SimpleCtrl' ng-app='SimpleApp'>
 <head>
-    <title>simple edit</title>
+    <title>Simple . an angular color editor for bootstrap</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js" type="text/javascript"></script>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!---colorpicker module--->
     <link rel="stylesheet" href="css/colorpicker.css">
+    <!---compiled LESS styles for Bootstrap & 451 app--->
     <link rel="stylesheet" href="css/bootstrap-451.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/simple.css">
+    <!---app css--->
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <section class="container-simple-editor clearfix">
@@ -69,14 +71,15 @@
                         </ul>
                     </nav>
                     <div class="col-xs-12 col-collapse">
-                        <div ng-repeat="color in panels">
+                        <div ng-repeat="color in panels" ng-show="$even">
                             <div class="panel {{color.parentclass}}">
                                 <div class="{{color.childclass}}">
-                                    <h3 ng-style="{'background-color' : color.value}" class="text-center {{color.class}}">{{color.name}}</h3>
+                                    <h3 ng-style="{'background-color' : color.value}" class="text-center {{color.class}}">
+                                        <span ng-repeat="color in panels" ng-class-even="'even'" ng-class-odd="'odd'" ng-style="{'color' : color.value}">{{color.name}}</span>
+                                    </h3>
                                 </div>
                                 <div class="panel-body">
                                     <p ng-style="{'color' : color.value}" class="{{color.class}}" ng-repeat="color in scaffolding" ng-hide="$first">{{color.name}}</p>
-
                                 </div>
                                 <div class="panel-footer"></div>
                            </div>
@@ -108,12 +111,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h3 class="text-info">Navigation Bar</h3>
+                    <h3 class="text-info">Navbar</h3>
                     <div ng-repeat="color in navbar">
-                        <label>{{color.name}}</label>
+
+                        <div class="col-sm-6"  style="margin-top: 5px;">   <label>{{color.name}}</label>
 
                             <input colorpicker type="text" ng-model="color.value" >
-
+                        </div>
 
                     </div>
                 </div>
@@ -138,17 +142,10 @@
                 <div class="row">
                     <h3 class="text-info">Panels</h3>
                     <div ng-repeat="color in panels">
-
+                        <div class="col-sm-6"  style="margin-top: 5px;">
                             <label>{{color.name}}</label>
-                        <div class="input-group">
                             <input colorpicker type="text" ng-model="color.value" >
-                                            <span class="input-group-btn">
-
-                                 <button colorpicker class="btn btn-default" ng-model="color.text" >text</button>
-                            </span>
-                    </div>
-
-
+                        </div>
                     </div>
                 </div>
                 <div class="row">

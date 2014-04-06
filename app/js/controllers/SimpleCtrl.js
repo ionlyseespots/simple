@@ -131,13 +131,29 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#0C2A3A"
         },
         {
+            "name":             "Primary panel text",
+            "parentclass":      "panel-primary",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "color",
+            "value":            "#FFFFFF"
+        },
+        {
             "name":             "Default panel",
             "parentclass":      "panel-default",
             "childclass":       "panel-heading",
             "class":            "panel-title",
             "property":         "background-color",
             "value":            "#F5F5F5"
-        }
+        },
+        {
+            "name":             "Default panel text",
+            "parentclass":      "panel-default",
+            "childclass":       "panel-heading",
+            "class":            "panel-title",
+            "property":         "color",
+            "value":            "#333333"
+        },
     ];
     $scope.wells = [
         {

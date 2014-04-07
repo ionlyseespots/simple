@@ -69,10 +69,28 @@ Simple.app.controller("SimpleCtrl", function($scope){
     ];
     $scope.buttons = [
         {
-            "name":         "Primary",
+            "name":         "Primary background",
             "class":        "btn-primary",
             "property":     "background-color",
             "value":        "#0C2A3A"
+        },
+        {
+            "name":         "Primary border",
+            "class":        "btn-primary",
+            "property":     "border-color",
+            "value":        "#0C2A3A"
+        },
+        {
+            "name":         "Primary text",
+            "class":        "btn-primary",
+            "property":     "color",
+            "value":        "#FFFFF"
+        },
+        {
+            "name":         "Primary hover",
+            "class":        "btn-primary:hover",
+            "property":     "background-color",
+            "value":        "yellow"
         },
         {
             "name":         "Default",

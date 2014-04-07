@@ -75,52 +75,142 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":        "#0C2A3A"
         },
         {
-            "name":         "Primary border",
-            "class":        "btn-primary",
-            "property":     "border-color",
-            "value":        "#0C2A3A"
-        },
-        {
             "name":         "Primary text",
             "class":        "btn-primary",
             "property":     "color",
             "value":        "#FFFFF"
         },
         {
+            "name":         "Primary border",
+            "class":        "btn-primary",
+            "property":     "border-color",
+            "value":        "#0C2A3A"
+        },
+        {
             "name":         "Primary hover",
             "class":        "btn-primary:hover",
             "property":     "background-color",
-            "value":        "yellow"
+            "value":        "#051118"
         },
         {
-            "name":         "Default",
+            "name":         "Default background",
             "class":        "btn-default",
             "property":     "background-color",
             "value":        "#FFFFFF"
         },
         {
-            "name":         "Info",
+            "name":         "Default text",
+            "class":        "btn-default",
+            "property":     "background-color",
+            "value":        "#333333"
+        },
+        {
+            "name":         "Default border",
+            "class":        "btn-default",
+            "property":     "border-color",
+            "value":        "#CCCCCC"
+        },
+        {
+            "name":         "Default hover",
+            "class":        "btn-default",
+            "property":     "background-color",
+            "value":        "#EBEBEB"
+        },
+        {
+            "name":         "Info background",
             "class":        "btn-info",
             "property":     "background-color",
             "value":        "#5BC0DE"
         },
         {
-            "name":         "Success",
+            "name":         "Info text",
+            "class":        "btn-info",
+            "property":     "color",
+            "value":        "#FFFFFF"
+        },
+        {
+            "name":         "Info border",
+            "class":        "btn-info",
+            "property":     "border-color",
+            "value":        "#46B8DA"
+        },
+        {
+            "name":         "Info hover",
+            "class":        "btn-info",
+            "property":     "background-color",
+            "value":        "#39B3D7"
+        },
+        {
+            "name":         "Success background",
             "class":        "btn-success",
             "property":     "background-color",
             "value":        "#5CB85C"
         },
         {
-            "name":         "Warning",
+            "name":         "Success text",
+            "class":        "btn-success",
+            "property":     "background-color",
+            "value":        "#FFFFFF"
+        },
+        {
+            "name":         "Success border",
+            "class":        "btn-success",
+            "property":     "border-color",
+            "value":        "#4CAE4C"
+        },
+        {
+            "name":         "Success hover",
+            "class":        "btn-success",
+            "property":     "background-color",
+            "value":        "#47A447"
+        },
+        {
+            "name":         "Warning background",
             "class":        "btn-warning",
             "property":     "background-color",
             "value":        "#f0ad4e"
         },
         {
-            "name":         "Danger",
+            "name":         "Warning text",
+            "class":        "btn-warning",
+            "property":     "color",
+            "value":        "#FFFFFF"
+        },
+        {
+            "name":         "Warning border",
+            "class":        "btn-warning",
+            "property":     "border-color",
+            "value":        "#EEA236"
+        },
+        {
+            "name":         "Warning hover",
+            "class":        "btn-warning",
+            "property":     "background-color",
+            "value":        "#ED9C28"
+        },
+        {
+            "name":         "Danger background",
             "class":        "btn-danger",
             "property":     "background-color",
             "value":        "#D9534F"
+        },
+        {
+            "name":         "Danger text",
+            "class":        "btn-danger",
+            "property":     "color",
+            "value":        "#FFFFFF"
+        },
+        {
+            "name":         "Danger border",
+            "class":        "btn-danger",
+            "property":     "border-color",
+            "value":        "#D43F3A"
+        },
+        {
+            "name":         "Danger hover",
+            "class":        "btn-danger",
+            "property":     "background-color",
+            "value":        "#D2322D"
         }
     ];
     $scope.jumbotron = [

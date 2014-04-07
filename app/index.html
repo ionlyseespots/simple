@@ -98,7 +98,7 @@
                                     </h3>
                                 </div>
                                 <div class="panel-body">
-                                    <div ng-repeat="color in buttons | filter: { name: 'Primary border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid;">
+                                    <div ng-repeat="color in buttons | filter: { name: 'Primary border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid;margin: 5px 0;">
                                         <div ng-repeat="color in buttons | filter: { name: 'Primary background' }">
                                             <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
                                                 <span  ng-repeat="color in buttons | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}">
@@ -112,6 +112,82 @@
                                             </btn>
                                         </div>
                                     </div>
+
+                                    <div ng-repeat="color in buttons | filter: { name: 'Default border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid; margin: 5px 0;">
+                                        <div ng-repeat="color in buttons | filter: { name: 'Default background' }">
+                                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
+                                                <span  ng-repeat="color in buttons | filter: { name: 'Default text' }" ng-style="{'color' : color.value}">
+                                                    {{color.name}}
+                                                </span>
+                                                <div ng-repeat="color in buttons | filter: { name: 'Default hover' }" ng-style="{'background-color' : color.value}" ng-show="highlightclass" style="z-index: 999999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+                                                     <span ng-repeat="color in buttons | filter: { name: 'Default text' }" ng-style="{'color' : color.value}">
+                                                        {{color.name}}
+                                                    </span>
+                                                </div>
+                                            </btn>
+                                        </div>
+                                    </div>
+
+                                    <div ng-repeat="color in buttons | filter: { name: 'Info border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid; margin: 5px 0;">
+                                        <div ng-repeat="color in buttons | filter: { name: 'Info background' }">
+                                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
+                                                <span  ng-repeat="color in buttons | filter: { name: 'Info text' }" ng-style="{'color' : color.value}">
+                                                    {{color.name}}
+                                                </span>
+                                                <div ng-repeat="color in buttons | filter: { name: 'Info hover' }" ng-style="{'background-color' : color.value}" ng-show="highlightclass" style="z-index: 999999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+                                                     <span ng-repeat="color in buttons | filter: { name: 'Info text' }" ng-style="{'color' : color.value}">
+                                                        {{color.name}}
+                                                    </span>
+                                                </div>
+                                            </btn>
+                                        </div>
+                                    </div>
+
+                                    <div ng-repeat="color in buttons | filter: { name: 'Success border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid; margin: 5px 0;">
+                                        <div ng-repeat="color in buttons | filter: { name: 'Success background' }">
+                                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
+                                                <span  ng-repeat="color in buttons | filter: { name: 'Success text' }" ng-style="{'color' : color.value}">
+                                                    {{color.name}}
+                                                </span>
+                                                <div ng-repeat="color in buttons | filter: { name: 'Success hover' }" ng-style="{'background-color' : color.value}" ng-show="highlightclass" style="z-index: 999999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+                                                     <span ng-repeat="color in buttons | filter: { name: 'Success text' }" ng-style="{'color' : color.value}">
+                                                        {{color.name}}
+                                                    </span>
+                                                </div>
+                                            </btn>
+                                        </div>
+                                    </div>
+
+                                    <div ng-repeat="color in buttons | filter: { name: 'Warning border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid; margin: 5px 0;">
+                                        <div ng-repeat="color in buttons | filter: { name: 'Warning background' }">
+                                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
+                                                <span  ng-repeat="color in buttons | filter: { name: 'Warning text' }" ng-style="{'color' : color.value}">
+                                                    {{color.name}}
+                                                </span>
+                                                <div ng-repeat="color in buttons | filter: { name: 'Warning hover' }" ng-style="{'background-color' : color.value}" ng-show="highlightclass" style="z-index: 999999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+                                                     <span ng-repeat="color in buttons | filter: { name: 'Warning text' }" ng-style="{'color' : color.value}">
+                                                        {{color.name}}
+                                                    </span>
+                                                </div>
+                                            </btn>
+                                        </div>
+                                    </div>
+
+                                    <div ng-repeat="color in buttons | filter: { name: 'Danger border' }" ng-style="{'border-color' : color.value}" style="border-radius: 4px;border: 1px solid; margin: 5px 0;">
+                                        <div ng-repeat="color in buttons | filter: { name: 'Danger background' }">
+                                            <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
+                                                <span  ng-repeat="color in buttons | filter: { name: 'Danger text' }" ng-style="{'color' : color.value}">
+                                                    {{color.name}}
+                                                </span>
+                                                <div ng-repeat="color in buttons | filter: { name: 'Danger hover' }" ng-style="{'background-color' : color.value}" ng-show="highlightclass" style="z-index: 999999999; position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+                                                     <span ng-repeat="color in buttons | filter: { name: 'Danger text' }" ng-style="{'color' : color.value}">
+                                                        {{color.name}}
+                                                    </span>
+                                                </div>
+                                            </btn>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="panel-footer"></div>
                             </div>
@@ -140,7 +216,8 @@
                 <div class="row">
                     <h3 class="text-info">Navbar</h3>
                     <div ng-repeat="color in navbar">
-                        <div class="col-sm-6"  style="margin-top: 5px;">   <label>{{color.name}}</label>
+                        <div class="col-sm-6"  style="margin-top: 5px;">
+                            <label>{{color.name}}</label>
                             <input colorpicker type="text" ng-model="color.value" >
                         </div>
                     </div>
@@ -174,11 +251,17 @@
                 </div>
                 <div class="row">
                     <h3 class="text-info">Buttons</h3>
-                    <div ng-repeat="color in buttons" style="margin-top: 5px;padding-left: 5px; padding-right: 5px;">
-                        <div class="col-sm-6"  style="margin-top: 5px;">
-                            <label>{{color.name}}</label>
-                            <input colorpicker type="text"  ng-model="color.value" >
-                        </div>
+                    <div ng-repeat="color in buttons"  style="margin-top: 5px;padding-left: 5px; padding-right: 5px;">
+                        <div ng-show=" {{$index == 0}}" style="margin: 0 0 10px; padding-top: 10px;" class="col-xs-12 text-info">Primary button</div>
+                        <div ng-show=" {{$index == 4}}" style="margin: 20px 0 10px;  padding-top: 10px;" class="col-xs-12 text-info">Default button</div>
+                        <div ng-show=" {{$index == 8}}" style="margin: 20px 0 10px;  padding-top: 10px;" class="col-xs-12 text-info">Info button</div>
+                        <div ng-show=" {{$index == 12}}" style="margin: 20px 0 10px; padding-top: 10px;" class="col-xs-12 text-info">Success button</div>
+                        <div ng-show=" {{$index == 16}}" style="margin: 20px 0 10px; padding-top: 10px;" class="col-xs-12 text-info">Warning button</div>
+                        <div ng-show=" {{$index == 20}}" style="margin: 20px 0 10px;  padding-top: 10px;" class="col-xs-12 text-info">Danger button</div>
+                       <div class="col-xs-6">
+                           <label>{{color.name}}</label>
+                           <input colorpicker type="text" ng-model="color.value" >
+                       </div>
                     </div>
                 </div>
                 <div class="well">

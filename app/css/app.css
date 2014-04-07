@@ -76,6 +76,7 @@ body {
     padding: 15px 0;
 }
 
+.buttons:nth-of-type(4) {border-bottom: 1px solid black;}
 .form-simple {
     border: 1px solid #d6d6d6;
     margin: 25px 0;

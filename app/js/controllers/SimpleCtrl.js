@@ -37,12 +37,12 @@ Simple.app.controller("SimpleCtrl", function($scope){
     ];
     $scope.scaffolding = [
         {
-            "name":             "Default background",
+            "name":             "Body background",
             "parentclass":      "",
             "childclass":       "",
             "parentelement":    "",
             "element":          "body",
-            "property":         "color",
+            "property":         "background-color",
             "value":            "#F0F0F0"
         },
         {
@@ -107,23 +107,22 @@ Simple.app.controller("SimpleCtrl", function($scope){
     ];
     $scope.jumbotron = [
         {
-            "name":             "Default background",
+            "name":             "Brand background",
             "class":            "jumbotron",
             "property":         "background-color",
             "value":            "#FFFFFF"
         },
         {
-            "name":             "Brand Heading",
+            "name":             "Brand Text",
             "parentclass":      "jumbotron",
             "element":          "h2",
             "property":         "color",
             "value":            "#333333"
         }
-
     ];
     $scope.panels = [
         {
-            "name":             "Primary panel",
+            "name":             "Primary background",
             "parentclass":      "panel-primary",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -139,7 +138,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#FFFFFF"
         },
         {
-            "name":             "Default panel",
+            "name":             "Default background",
             "parentclass":      "panel-default",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -154,24 +153,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "property":         "color",
             "value":            "#333333"
         },
-    ];
-    $scope.wells = [
-        {
-            "name":             "Category well",
-            "parentclass":      "panel-category-list",
-            "element":          "li",
-            "class":            "well",
-            "property":         "background-color",
-            "value":            "#FFFFFF"
-        },
-        {
-            "name":             "Product well",
-            "parentclass":      "panel-product-list",
-            "element":          "li",
-            "class":            "well",
-            "property":         "background-color",
-            "value":            "#FFFFFF"
-        }
     ];
 	function format(d){
 
@@ -192,7 +173,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
 		format($scope.buttons);
 		format($scope.jumbotron);
 		format($scope.panels);
-		format($scope.wells);
 		console.log($scope.file);
 	};
     $scope.resetnavbar = angular.copy($scope.navbar);
@@ -206,7 +186,6 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.scaffolding = angular.copy($scope.resetscaffolding);
         $scope.buttons = angular.copy($scope.resetbuttons);
         $scope.panels = angular.copy($scope.resetpanels);
-        $scope.wells = angular.copy($scope.resetwells);
         $scope.jumbotron = angular.copy($scope.resetjumbotron);
     };
 });

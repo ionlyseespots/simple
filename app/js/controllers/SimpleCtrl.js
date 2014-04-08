@@ -14,7 +14,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "element":          "a",
             "property":         "color",
             "value":            "#FFFFFF",
-            "important":        ""
+            "important":        " !important"
         },
         {
             "name":             "Active background",
@@ -88,10 +88,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Primary text",
-            "class":        "btn-primary",
+            "class":        "btn-primary, btn-primary:hover",
             "property":     "color",
             "value":        "#FFFFF",
-            "important":    " !important"
+            "important":    ""
         },
         {
             "name":         "Primary border",
@@ -116,10 +116,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Default text",
-            "class":        "btn-default",
+            "class":        "btn-default, btn-default:hover",
             "property":     "color",
             "value":        "#333333",
-            "important":    " !important"
+            "important":    " "
         },
         {
             "name":         "Default border",
@@ -144,10 +144,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Info text",
-            "class":        "btn-info",
+            "class":        "btn-info, btn-info:hover",
             "property":     "color",
             "value":        "#FFFFFF",
-            "important":    " !important"
+            "important":    ""
         },
         {
             "name":         "Info border",
@@ -172,10 +172,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Success text",
-            "class":        "btn-success",
+            "class":        "btn-success, btn-success:hover",
             "property":     "color",
             "value":        "#FFFFFF",
-            "important":    " !important"
+            "important":    ""
         },
         {
             "name":         "Success border",
@@ -200,10 +200,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Warning text",
-            "class":        "btn-warning",
+            "class":        "btn-warning, btn-warning:hover",
             "property":     "color",
             "value":        "#FFFFFF",
-            "important":    " !important"
+            "important":    ""
         },
         {
             "name":         "Warning border",
@@ -228,10 +228,10 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Danger text",
-            "class":        "btn-danger",
+            "class":        "btn-danger, btn-danger:hover",
             "property":     "color",
             "value":        "#FFFFFF",
-            "important":    " !important"
+            "important":    ""
         },
         {
             "name":         "Danger border",

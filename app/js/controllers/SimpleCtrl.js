@@ -13,7 +13,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "parentclass":      "navbar-nav",
             "element":          "a",
             "property":         "color",
-            "value":            "",
+            "value":            "#FFFFFF",
             "important":        " !important"
         },
         {
@@ -31,7 +31,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "parentelement":    "li.active",
             "element":          "a",
             "property":         "color",
-            "value":            "",
+            "value":            "#FFFFFF",
             "important":        " !important"
         },
         {

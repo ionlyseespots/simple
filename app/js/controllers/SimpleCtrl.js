@@ -88,7 +88,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Primary text",
-            "class":        "btn-primary, btn-primary:hover",
+            "class":        "btn-primary, .btn-primary:hover",
             "property":     "color",
             "value":        "#FFFFF",
             "important":    ""
@@ -116,7 +116,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Default text",
-            "class":        "btn-default, btn-default:hover",
+            "class":        "btn-default, .btn-default:hover",
             "property":     "color",
             "value":        "#333333",
             "important":    " "
@@ -144,7 +144,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Info text",
-            "class":        "btn-info, btn-info:hover",
+            "class":        "btn-info, .btn-info:hover",
             "property":     "color",
             "value":        "#FFFFFF",
             "important":    ""
@@ -172,7 +172,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Success text",
-            "class":        "btn-success, btn-success:hover",
+            "class":        "btn-success, .btn-success:hover",
             "property":     "color",
             "value":        "#FFFFFF",
             "important":    ""
@@ -200,7 +200,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Warning text",
-            "class":        "btn-warning, btn-warning:hover",
+            "class":        "btn-warning, .btn-warning:hover",
             "property":     "color",
             "value":        "#FFFFFF",
             "important":    ""
@@ -228,7 +228,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         },
         {
             "name":         "Danger text",
-            "class":        "btn-danger, btn-danger:hover",
+            "class":        "btn-danger, .btn-danger:hover",
             "property":     "color",
             "value":        "#FFFFFF",
             "important":    ""

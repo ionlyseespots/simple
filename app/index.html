@@ -6,10 +6,8 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <!---colorpicker module--->
     <link rel="stylesheet" href="css/colorpicker.css">
-    <!---compiled LESS styles for Bootstrap & 451 app--->
-    <link rel="stylesheet" href="css/bootstrap-451.css">
     <!---app css--->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/csseditor.css">
 </head>
 <body>
 <section class="container-simple-editor clearfix">
@@ -237,7 +235,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+
+                <div class="row row-buttons">
                     <h3 class="text-info">Buttons</h3>
                     <div class="buttons" ng-repeat="color in buttons">
                         <p ng-show=" {{$index == 0}}" class="col-xs-12 text-info">
@@ -261,7 +260,6 @@
                        <p class="col-xs-6">
                            <label>{{color.name}}</label>
                            <input colorpicker type="text" ng-model="color.value" >
-                       </div>
                     </div>
                 </div>
                 <div class="well">

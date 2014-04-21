@@ -1,3 +1,3 @@
 var Simple = {};
 
-Simple.app = angular.module('SimpleApp',['colorpicker.module']);
+Simple.app = angular.module('SimpleApp',['colorpicker.module', 'FBAngular']);

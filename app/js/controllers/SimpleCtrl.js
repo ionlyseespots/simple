@@ -1,4 +1,16 @@
-Simple.app.controller("SimpleCtrl", function($scope){
+Simple.app.controller("SimpleCtrl", function($scope, Fullscreen){
+    $scope.goFullscreen = function () {
+
+        if (Fullscreen.isEnabled())
+            Fullscreen.cancel();
+        else
+            Fullscreen.all();
+
+        // Set Fullscreen to a specific element (bad practice)
+        // Fullscreen.enable( document.getElementById('img') )
+
+    }
+
 // default css
     $scope.navbar = [
         {
@@ -267,7 +279,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
     ];
     $scope.panels = [
         {
-            "name":             "Primary background",
+            "name":             "Primary panel header background",
             "parentclass":      "panel-primary",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -276,7 +288,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "important":        ""
         },
         {
-            "name":             "Primary panel text",
+            "name":             "Primary panel header text",
             "parentclass":      "panel-primary",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -285,7 +297,15 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "important":        ""
         },
         {
-            "name":             "Default background",
+            "name":             "Primary panel body background",
+            "parentclass":      "panel-primary",
+            "childclass":       "panel-body",
+            "property":         "background-color",
+            "value":            "#FFFFFF",
+            "important":        ""
+        },
+        {
+            "name":             "Default panel header background",
             "parentclass":      "panel-default",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -294,7 +314,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "important":        ""
         },
         {
-            "name":             "Default panel text",
+            "name":             "Default panel header text",
             "parentclass":      "panel-default",
             "childclass":       "panel-heading",
             "class":            "panel-title",
@@ -302,8 +322,38 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "value":            "#333333",
             "important":        ""
         },
+        {
+            "name":             "Default panel body background",
+            "parentclass":      "panel-default",
+            "childclass":       "panel-body",
+            "property":         "background-color",
+            "value":            "#FFFFFF",
+            "important":        ""
+        }
     ];
-
+    $scope.wells = [
+        {
+            "name":             "Default background",
+            "class":            "well",
+            "property":         "background-color",
+            "value":            "#FFFFFF",
+            "important":        ""
+        },
+        {
+            "name":             "Well Text",
+            "class":            "well",
+            "property":         "color",
+            "value":            "#333333",
+            "important":        ""
+        },
+        {
+            "name":             "Border",
+            "class":            "well",
+            "property":         "border-color",
+            "value":            "#F0F0F0",
+            "important":        ""
+        }
+    ];
 
 
     // color palette lib
@@ -341,6 +391,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
 		format($scope.buttons);
 		format($scope.jumbotron);
 		format($scope.panels);
+        format($scope.wells);
 		console.log($scope.file);
 	};
 
@@ -357,6 +408,7 @@ Simple.app.controller("SimpleCtrl", function($scope){
         $scope.buttons = angular.copy($scope.resetbuttons);
         $scope.panels = angular.copy($scope.resetpanels);
         $scope.jumbotron = angular.copy($scope.resetjumbotron);
+        $scope.wells = angular.copy($scope.resetwells);
     };
 });
 

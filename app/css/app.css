@@ -63,15 +63,8 @@ label {font-size: 11px;}
     /*width: 320px;*/
 /*}*/
 
-.container-simple .panel-primary .odd,
-.container-simple .panel-primary span:nth-of-type(4) {
-    display: none;
-}
+.container-simple-well {border: none;}
 
-.container-simple .panel-default .odd,
-.container-simple .panel-default span:nth-of-type(2) {
-    display: none;
-}
 
 .container-simple .navbar {
     border: none;
@@ -95,6 +88,7 @@ label {font-size: 11px;}
     bottom: 0;
 }
 
+
 .container-simple .btn {
     margin: 0;
     padding: 15px 0;
@@ -113,9 +107,6 @@ label {font-size: 11px;}
     padding: 0 5px;
 }
 
-.form-simple p.text-info {
-    padding-top: 10px;
-}
 
 .form-simple .buttons {
     margin-top: 5px;
@@ -133,8 +124,7 @@ label {font-size: 11px;}
 }
 
 .form-simple .row {
-    padding: 10px 10px 20px;
-    border-bottom: 1px solid #d6d6d6;
+    padding: 10px;
 }
 
 .form-simple .well {

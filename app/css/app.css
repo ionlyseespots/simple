@@ -1,9 +1,10 @@
 /* cuurrently, app.css inherits many styles from the compiled less bootstrap-451.css file */
 
 body {
-    background-color: #fafafa;
+    background-color: #fff;
 }
 
+div {position: static;}
 /*.container-simple-editor {*/
     /*width: 750px;*/
     /*margin: 15px auto;*/
@@ -14,6 +15,7 @@ body {
     border: 1px solid #d6d6d6;
 }
 
+label {font-size: 11px;}
 /* going to make the phone area toggable and expand design, remove comments below if you want a css phone*/
 /*.container-phone {*/
     /*background-color:#F0F0F0;*/
@@ -108,7 +110,6 @@ body {
 }
 
 .form-simple {
-    border: 1px solid #d6d6d6;
     padding: 0 5px;
 }
 

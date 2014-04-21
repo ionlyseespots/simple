@@ -303,8 +303,25 @@ Simple.app.controller("SimpleCtrl", function($scope){
             "important":        ""
         },
     ];
-	function format(d){
 
+
+
+    // color palette lib
+    $scope.themeNames = [{
+        theme: "Theme 1"
+    }, {
+        theme: "Theme 2"
+    }];
+
+    // add new color palette to lib
+    $scope.newFruit = '';
+    $scope.add = function (){
+        $scope.themeNames.push({theme: $scope.newFruit});
+        $scope.newFruit = null;
+    };
+
+    // format json to css
+	function format(d){
         angular.forEach(d, function(i){
             var dot = ".";
             var pc = i.parentclass ? dot + i.parentclass + ' ' : '';
@@ -315,6 +332,8 @@ Simple.app.controller("SimpleCtrl", function($scope){
 			$scope.file += pc + cc + pe + el + cl + ' {' + i.property + ': ' + i.value + i.important + ';}\r';
 		});
 	}
+
+    // save json to css
 	$scope.save = function() {
 		$scope.file = "";
 		format($scope.navbar);
@@ -324,6 +343,8 @@ Simple.app.controller("SimpleCtrl", function($scope){
 		format($scope.panels);
 		console.log($scope.file);
 	};
+
+    // reset json to original values
     $scope.resetnavbar = angular.copy($scope.navbar);
     $scope.resetscaffolding = angular.copy($scope.scaffolding);
     $scope.resetbuttons = angular.copy($scope.buttons);

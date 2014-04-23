@@ -63,6 +63,16 @@ label {font-size: 11px;}
 /*width: 320px;*/
 /*}*/
 
+.navbar .container .navbar-nav li.active .fa-caret-down, .navbar .container-view .navbar-nav li.active .fa-caret-down {
+    bottom: -20px;
+    color: #359FD5;
+    display: block;
+    font-size: 32px;
+    left: 40%;
+    position: absolute;
+    z-index: 5;
+}
+
 .container-simple-well {border: none;}
 
 

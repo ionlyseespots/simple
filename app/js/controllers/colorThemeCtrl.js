@@ -1,5 +1,5 @@
 Simple.app.controller("colorThemeCtrl", function($scope){
-// default css
+// bootstrap
 $scope.navbar = [
     {
         "name":             "Default background",
@@ -257,8 +257,8 @@ $scope.jumbotron = [
         "important":        ""
     },
     {
-        "name":             "Brand Text",
-        "class":      "jumbotron",
+        "name":             "Buyer Co",
+        "class":            "jumbotron",
         "element":          "h2",
         "property":         "color",
         "value":            "#333333",
@@ -341,7 +341,7 @@ $scope.wells = [
     }
 ];
 
-    //custom
+// custom
 $scope.categorywells = [
     {
         "name":             "Default background",
@@ -365,8 +365,7 @@ $scope.categorywells = [
         "important":        ""
     }
 ];
-
-    $scope.productwells = [
+$scope.productwells = [
     {
         "name":             "Default background",
         "class":            "well",
@@ -389,6 +388,7 @@ $scope.categorywells = [
         "important":        ""
     }
 ];
+
 
 // color palette lib
 $scope.themeNames = [{
@@ -426,6 +426,8 @@ $scope.save = function() {
     format($scope.jumbotron);
     format($scope.panels);
     format($scope.wells);
+    format($scope.categorywells);
+    format($scope.productwells);
     console.log($scope.file);
 };
 
@@ -436,6 +438,8 @@ $scope.resetbuttons = angular.copy($scope.buttons);
 $scope.resetpanels = angular.copy($scope.panels);
 $scope.resetjumbotron = angular.copy($scope.jumbotron);
 $scope.resetwells = angular.copy($scope.wells);
+$scope.resetcategorywells = angular.copy($scope.categorywells);
+$scope.resetproductwells = angular.copy($scope.productwells);
 $scope.resetColor = function() {
     $scope.navbar = angular.copy($scope.resetnavbar);
     $scope.scaffolding = angular.copy($scope.resetscaffolding);
@@ -443,6 +447,8 @@ $scope.resetColor = function() {
     $scope.panels = angular.copy($scope.resetpanels);
     $scope.jumbotron = angular.copy($scope.resetjumbotron);
     $scope.wells = angular.copy($scope.resetwells);
+    $scope.categorywells = angular.copy($scope.resetcategorywells);
+    $scope.productwells = angular.copy($scope.resetproductwells);
 };
 });
 

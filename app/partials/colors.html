@@ -175,7 +175,7 @@
         <div style="width: 320px;">
             <!--- phone is going to be toggable and/or expanded to other device views --->
             <div class="container-phone">
-                <div class="container-simple" style="position: relative;" ng-repeat="color in scaffolding | filter: { name: 'Body background' }" ng-style="{'background-color' : color.value}">
+                <div class="container-simple" ng-repeat="color in scaffolding | filter: { name: 'Body background' }" ng-style="{'background-color' : color.value}">
                     <nav ng-repeat="color in navbar | filter: { name: 'Default background' }" ng-style="{'background-color' : color.value}" class="navbar {{color.class}}" role="navigation">
                         <section>
                             <div class="container navbar-simple-border" ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}">
@@ -203,17 +203,18 @@
                             </div>
                         </section>
                     </nav>
-
-                    <nav class="text-center" style="position: absolute; left: 5px; right: 5px; top: 60px;border-bottom: 1px solid #FFFFFF;padding: 0 10px;
+<div style="position: relative; height: 40px;">
+                    <nav class="text-center" style="position: absolute; left: 5px; right: 5px; top: 0;border-bottom: 1px solid #FFFFFF;padding: 0 10px;
     height: 40px;">
-                        <a href="#.#" class="text-center"><i style="font-weight: bold;font-size: 18px;
-    padding: 10px;" class="fa fa-angle-down"></i>
+                        <a href="#.#" class="text-center">
+                            <i ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}} fa fa-angle-down" style="font-weight: bold;font-size: 18px; padding: 10px;"></i>
+
                         </a>
 
-                    </nav>
+                    </nav></div>
 
-                    <section style="margin-top: 40px;" ng-repeat="color in jumbotron | filter: { name: 'Brand background' }" ng-style="{'background-color' : color.value}" class="{{color.class}} active text-center" style="margin-top: 5px;">
-                        <h2 ng-repeat="color in jumbotron | filter: { name: 'Brand Text' }" ng-style="{'color' : color.value}">
+                    <section ng-repeat="color in jumbotron | filter: { name: 'Brand background' }" ng-style="{'background-color' : color.value}" class="{{color.class}} active text-center" style="margin-top: 5px;">
+                        <h2 ng-repeat="color in jumbotron | filter: { name: 'Buyer Co' }" ng-style="{'color' : color.value}">
                             <span>{{color.name}}</span>
                         </h2>
                     </section>
@@ -221,10 +222,13 @@
                         <nav class="nav">
                             <ul>
                                 <li>
-                                    <span ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}}">Primary Text</span>
+                                    <span ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}}">Categories</span>
                                 </li>
                                 <li class="pull-right">
-                                    <a href="#.#"><span><i class="fa fa-search"></i></span></a>
+                                    <a href="#.#"><span>
+                                      <i ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}} fa fa-search"></i>
+
+                                    </a>
                                 </li>
                             </ul>
                         </nav>

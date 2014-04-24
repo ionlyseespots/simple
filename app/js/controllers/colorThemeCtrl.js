@@ -38,7 +38,7 @@ $scope.navbar = [
         "name":             "Border",
         "class":            "navbar-default",
         "property":         "border-color",
-        "value":            "#359FD5",
+        "value":            "#FFFFFF",
         "important":        ""
     }
 ];

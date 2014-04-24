@@ -210,7 +210,7 @@
                         </section>
                     </nav>
 <div style="position: relative; height: 40px;">
-                    <nav class="text-center" style="position: absolute; left: 5px; right: 5px; top: 0;border-bottom: 1px solid #FFFFFF;padding: 0 10px;
+                    <nav ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}" class="text-center" style="position: absolute; left: 5px; right: 5px; top: 0;border-bottom: 1px solid #FFFFFF;padding: 0 10px;
     height: 40px;">
                         <a href="#.#" class="text-center">
                             <i ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}} fa fa-angle-down" style="font-weight: bold;font-size: 18px; padding: 10px;"></i>

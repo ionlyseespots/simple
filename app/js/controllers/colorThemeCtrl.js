@@ -397,6 +397,7 @@ $scope.themeNames = [{
     theme: "Theme 2"
 }];
 
+
 // add new color palette to lib
 $scope.newFruit = '';
 $scope.add = function (){

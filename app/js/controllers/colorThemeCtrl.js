@@ -54,7 +54,7 @@ $scope.scaffolding = [
         "important":        ""
     },
     {
-        "name":             "Primary text",
+        "name":             "Primary text & Primary icons",
         "class":            "text-primary",
         "property":         "color",
         "value":            "#0C2A3A",

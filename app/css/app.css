@@ -21,7 +21,7 @@ label {font-size: 11px;}
 background-color:#F0F0F0;
 border: 5px solid #fff;
 border-top: 75px solid #fff;
-margin: 15px 0;
+margin: 75px 0 0 ;
 border-bottom: 75px solid #fff;
 border-radius: 45px;
 -webkit-box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.35);
@@ -127,6 +127,11 @@ width: 320px;
 .form-simple .row {
     padding: 10px;
 }
+
+.form-simple .row label {
+    margin-top: 15px;
+}
+
 
 .form-simple .well {
     border: 1px solid #d6d6d6;

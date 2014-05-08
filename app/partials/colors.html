@@ -11,12 +11,12 @@
                 <!--</select>-->
                 <!--&lt;!&ndash;Currently viewing: {{themeName}}&ndash;&gt;-->
                 <div class="btn-group btn-group-justified">
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'navbar' }" ng-init="colorSection = 'navbar'" ng-click="colorSection = 'navbar'" ><i class="fa fa-align-justify"></i></button></div>
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'branding' }" ng-click="colorSection = 'branding'"><i class="fa fa-bullseye"></i></button></div>
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'body' }"ng-click="colorSection = 'body'"><i class="fa fa-font"></i></button></div>
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'panels' }"ng-click="colorSection = 'panels'"><i class="fa fa-columns"></i></button></div>
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'wells' }"ng-click="colorSection = 'wells'"><i class="fa fa-th-large"></i></button></div>
-                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'buttons' }"ng-click="colorSection = 'buttons'"><i class="fa fa-square"></i></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'navbar' }" ng-init="colorSection = 'navbar'" ng-click="colorSection = 'navbar'" ><small>Navbar</small></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'branding' }" ng-click="colorSection = 'branding'"><small>Brand</small></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'body' }"ng-click="colorSection = 'body'"><small>Body</small></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'panels' }"ng-click="colorSection = 'panels'"><small>Panels</small></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'wells' }"ng-click="colorSection = 'wells'"><small>Wells</small></button></div>
+                    <div class="btn-group">  <button class="btn btn-default" ng-class="{'active': colorSection == 'buttons' }"ng-click="colorSection = 'buttons'"><small>Buttons</small></button></div>
                 </div>
             </div>
             <div style="bottom: 253px;  left: 0; overflow-y: scroll; padding: 10px; position: absolute;  right: 0; top: 110px;">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row"  ng-show="colorSection == 'branding'" >
                     <h3 class="text-info">
-                        Branding
+                        Brand
                     </h3>
                     <div ng-repeat="color in jumbotron">
                         <label>{{color.name}}</label>
@@ -206,7 +206,7 @@
                             </div>
                         </section>
                     </nav>
-<div style="position: relative; height: 40px;">
+                    <div style="position: relative; height: 40px;">
                     <nav ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}" class="text-center" style="position: absolute; left: 5px; right: 5px; top: 0;border-bottom: 1px solid #FFFFFF;padding: 0 10px;
     height: 40px;">
                         <a href="#.#" class="text-center">
@@ -214,7 +214,8 @@
 
                         </a>
 
-                    </nav></div>
+                    </nav>
+                    </div>
 
                     <section ng-repeat="color in jumbotron | filter: { name: 'Brand background' }" ng-style="{'background-color' : color.value}" class="{{color.class}} active text-center" style="margin-top: 5px;">
                         <h2 ng-repeat="color in jumbotron | filter: { name: 'Buyer Co' }" ng-style="{'color' : color.value}">
@@ -281,11 +282,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Primary border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Primary background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                        <span  ng-repeat="color in buttons | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}">
+                                                        <span  ng-repeat="color in buttons | filter: { name: 'Primary Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Primary hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                         <span ng-repeat="color in buttons | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}">
+                                                         <span ng-repeat="color in buttons | filter: { name: 'Primary Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     </div>
@@ -295,11 +296,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Default border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Default background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                    <span  ng-repeat="color in buttons | filter: { name: 'Default text' }" ng-style="{'color' : color.value}">
+                                                    <span  ng-repeat="color in buttons | filter: { name: 'Default Button' }" ng-style="{'color' : color.value}">
                                                         {{color.name}}
                                                     </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Default hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                         <span ng-repeat="color in buttons | filter: { name: 'Default text' }" ng-style="{'color' : color.value}">
+                                                         <span ng-repeat="color in buttons | filter: { name: 'Default Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     </div>
@@ -309,11 +310,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Info border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Info background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                       <span  ng-repeat="color in buttons | filter: { name: 'Info text' }" ng-style="{'color' : color.value}">
+                                                       <span  ng-repeat="color in buttons | filter: { name: 'Info Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Info hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                        <span ng-repeat="color in buttons | filter: { name: 'Info text' }" ng-style="{'color' : color.value}">
+                                                        <span ng-repeat="color in buttons | filter: { name: 'Info Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     </div>
@@ -323,11 +324,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Success border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Success background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                        <span  ng-repeat="color in buttons | filter: { name: 'Success text' }" ng-style="{'color' : color.value}">
+                                                        <span  ng-repeat="color in buttons | filter: { name: 'Success Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Success hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                        <span ng-repeat="color in buttons | filter: { name: 'Success text' }" ng-style="{'color' : color.value}">
+                                                        <span ng-repeat="color in buttons | filter: { name: 'Success Button' }" ng-style="{'color' : color.value}">
                                                             {{color.name}}
                                                         </span>
                                                     </div>
@@ -337,11 +338,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Warning border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Warning background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                            <span  ng-repeat="color in buttons | filter: { name: 'Warning text' }" ng-style="{'color' : color.value}">
+                                                            <span  ng-repeat="color in buttons | filter: { name: 'Warning Button' }" ng-style="{'color' : color.value}">
                                                                 {{color.name}}
                                                             </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Warning hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                                 <span ng-repeat="color in buttons | filter: { name: 'Warning text' }" ng-style="{'color' : color.value}">
+                                                                 <span ng-repeat="color in buttons | filter: { name: 'Warning Button' }" ng-style="{'color' : color.value}">
                                                                     {{color.name}}
                                                                 </span>
                                                     </div>
@@ -351,11 +352,11 @@
                                         <div class="buttons-simple-border" ng-repeat="color in buttons | filter: { name: 'Danger border' }" ng-style="{'border-color' : color.value}">
                                             <div ng-repeat="color in buttons | filter: { name: 'Danger background' }">
                                                 <btn type="button" ng-style="{'background-color' : color.value}" class="btn btn-block {{color.class}}"  ng-mouseenter="highlightclass='highlight'" ng-mouseleave="highlightclass=''">
-                                                            <span  ng-repeat="color in buttons | filter: { name: 'Danger text' }" ng-style="{'color' : color.value}">
+                                                            <span  ng-repeat="color in buttons | filter: { name: 'Danger Button' }" ng-style="{'color' : color.value}">
                                                                 {{color.name}}
                                                             </span>
                                                     <div ng-repeat="color in buttons | filter: { name: 'Danger hover' }" ng-style="{'background-color' : color.value}" ng-class="highlightclass" ng-show="highlightclass">
-                                                                 <span ng-repeat="color in buttons | filter: { name: 'Danger text' }" ng-style="{'color' : color.value}">
+                                                                 <span ng-repeat="color in buttons | filter: { name: 'Danger Button' }" ng-style="{'color' : color.value}">
                                                                     {{color.name}}
                                                                 </span>
                                                     </div>

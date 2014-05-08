@@ -87,7 +87,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Primary text",
+        "name":         "Primary Button",
         "class":        "btn-primary, .btn-primary:hover",
         "property":     "color",
         "value":        "#FFFFF",
@@ -115,7 +115,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Default text",
+        "name":         "Default Button",
         "class":        "btn-default, .btn-default:hover",
         "property":     "color",
         "value":        "#333333",
@@ -143,7 +143,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Info text",
+        "name":         "Info Button",
         "class":        "btn-info, .btn-info:hover",
         "property":     "color",
         "value":        "#FFFFFF",
@@ -171,7 +171,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Success text",
+        "name":         "Success Button",
         "class":        "btn-success, .btn-success:hover",
         "property":     "color",
         "value":        "#FFFFFF",
@@ -199,7 +199,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Warning text",
+        "name":         "Warning Button",
         "class":        "btn-warning, .btn-warning:hover",
         "property":     "color",
         "value":        "#FFFFFF",
@@ -227,7 +227,7 @@ $scope.buttons = [
         "important":    ""
     },
     {
-        "name":         "Danger text",
+        "name":         "Danger Button",
         "class":        "btn-danger, .btn-danger:hover",
         "property":     "color",
         "value":        "#FFFFFF",

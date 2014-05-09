@@ -24,7 +24,7 @@ $scope.navbar = [
         "element":          "a",
         "property":         "background-color",
         "value":            "#359FD5",
-        "important":        " !important"
+        "important":        ""
     },
     {
         "name":             "Active text",
@@ -33,7 +33,7 @@ $scope.navbar = [
         "element":          "a",
         "property":         "color",
         "value":            "#FFFFFF",
-        "important":        " !important"
+        "important":        ""
     },
     {
         "name":             "Border",

@@ -10,11 +10,11 @@ $scope.navbar = [
     },
     {
         "name":             "Default text",
-        "class":            "navbar-nav",
+        "parentclass":      "navbar-nav",
         "element":          "a",
         "property":         "color",
         "value":            "#FFFFFF",
-        "important":        " !important"
+        "important":        ""
     },
     {
         "name":             "Active background",
@@ -388,6 +388,8 @@ $scope.productwells = [
         "important":        ""
     }
 ];
+
+
 
 
 // color palette lib

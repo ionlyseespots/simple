@@ -20,7 +20,7 @@ $scope.navbar = [
         "name":             "Active background",
         "parentclass":      "navbar-nav",
         "parentelement":    "li.active",
-        "element":          "a, li.active .fa-caret-down",
+        "element":          "a",
         "property":         "background-color",
         "value":            "#359FD5",
         "important":        " !important"

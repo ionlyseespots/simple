@@ -1,4 +1,23 @@
-Simple.app.controller("colorThemeCtrl", function($scope){
+Simple.app.controller("colorThemeCtrl", function($scope, Less){
+var primaryButtonBackgroundColor = "#0C2A3A";
+var primaryButtonBorderColor = Less.LightDark(primaryButtonBackgroundColor, -5);
+var primaryButtonHoverColor = Less.LightDark(primaryButtonBackgroundColor, -10);
+
+$scope.buttonCrunch = function(newColor, index){
+    $scope.buttons[index + 2].value = Less.LightDark(newColor, -15);
+    $scope.buttons[index + 3].value = Less.LightDark(newColor, -20);
+    var color = new Less.RGBColor(newColor);
+    if (color.ok){
+        var brightness = Less.calcBrightness(color);
+        var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+    }
+    $scope.buttons[index + 1].value = newTextColor;
+};
+
+$scope.colorCrunch = function(newColor, index){
+
+};
+
 // bootstrap
 $scope.navbar = [
     {
@@ -84,7 +103,7 @@ $scope.buttons = [
         "name":         "Primary background",
         "class":        "btn-primary",
         "property":     "background-color",
-        "value":        "#0C2A3A",
+        "value":        primaryButtonBackgroundColor,
         "important":    ""
     },
     {
@@ -98,14 +117,14 @@ $scope.buttons = [
         "name":         "Primary border",
         "class":        "btn-primary",
         "property":     "border-color",
-        "value":        "#0C2A3A",
+        "value":        primaryButtonBorderColor,
         "important":    ""
     },
     {
         "name":         "Primary hover",
         "class":        "btn-primary:hover",
         "property":     "background-color",
-        "value":        "#051118",
+        "value":        primaryButtonHoverColor,
         "important":    ""
     },
     {

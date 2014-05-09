@@ -10,7 +10,8 @@ $scope.navbar = [
     },
     {
         "name":             "Default text",
-        "parentclass":      "navbar-nav",
+        "parentclass":      "container .navbar-nav",
+        "parentelement":    "li",
         "element":          "a",
         "property":         "color",
         "value":            "#FFFFFF",
@@ -18,7 +19,7 @@ $scope.navbar = [
     },
     {
         "name":             "Active background",
-        "parentclass":      "navbar-nav",
+        "parentclass":      "container .navbar-nav",
         "parentelement":    "li.active",
         "element":          "a",
         "property":         "background-color",
@@ -27,7 +28,7 @@ $scope.navbar = [
     },
     {
         "name":             "Active text",
-        "parentclass":      "navbar-nav",
+        "parentclass":      "container .navbar-nav",
         "parentelement":    "li.active",
         "element":          "a",
         "property":         "color",
@@ -90,7 +91,7 @@ $scope.buttons = [
         "name":         "Primary Button",
         "class":        "btn-primary, .btn-primary:hover",
         "property":     "color",
-        "value":        "#FFFFF",
+        "value":        "#FFFFFF",
         "important":    ""
     },
     {

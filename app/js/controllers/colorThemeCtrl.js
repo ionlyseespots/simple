@@ -3,6 +3,25 @@ var primaryButtonBackgroundColor = "#0C2A3A";
 var primaryButtonBorderColor = Less.LightDark(primaryButtonBackgroundColor, -5);
 var primaryButtonHoverColor = Less.LightDark(primaryButtonBackgroundColor, -10);
 
+$scope.navbarCrunch = function(newColor){
+    $scope.navbar[0].value = newColor;
+    var color = new Less.RGBColor(newColor);
+    if (color.ok){
+        var brightness = Less.calcBrightness(color);
+        var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+    }
+    $scope.navbar[1].value = newTextColor;
+    var activeColor = Less.LightDark(newColor, -20);
+    $scope.navbar[2].value = activeColor;
+    var activeBg = new Less.RGBColor(activeColor);
+    if (activeBg.ok){
+        var abrightness = Less.calcBrightness(activeBg);
+        var activeTextColor = (abrightness < 130) ? "#FFFFFF" : "#000000";
+    }
+    $scope.navbar[3].value = activeTextColor;
+
+}
+
 $scope.buttonCrunch = function(newColor, index){
     $scope.buttons[index + 2].value = Less.LightDark(newColor, -15);
     $scope.buttons[index + 3].value = Less.LightDark(newColor, -20);
@@ -12,10 +31,6 @@ $scope.buttonCrunch = function(newColor, index){
         var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
     }
     $scope.buttons[index + 1].value = newTextColor;
-};
-
-$scope.colorCrunch = function(newColor, index){
-
 };
 
 // bootstrap

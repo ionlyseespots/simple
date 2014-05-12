@@ -24,10 +24,14 @@
                     <h3 class="text-info">
                         Navbar
                     </h3>
-                    <div ng-repeat="color in navbar">
+                    <div ng-repeat="color in navbar" ng-show="([0,4].indexOf($index) > -1)">
                         <label>{{color.name}}</label>
-                        <div class="input-group">
-                            <input  colorpicker colorpicker-position="bottom" colorpicker-fixed-position="true" colorpicker-parent="true" type="text" ng-model="color.value" >
+                        <div class="input-group" ng-if="([0].indexOf($index) > -1)">
+                            <input  colorpicker colorpicker-position="bottom" colorpicker-fixed-position="true" colorpicker-parent="true" type="text" ng-model="color.value" ng-change="navbarCrunch(color.value)" >
+                            <span class="input-group-addon"  ng-style="{'background-color' : color.value}" ng-model="color.value"></span>
+                        </div>
+                        <div class="input-group" ng-if="([4].indexOf($index) > -1)">
+                            <input  colorpicker colorpicker-position="bottom" colorpicker-fixed-position="true" colorpicker-parent="true" type="text" ng-model="color.value">
                             <span class="input-group-addon"  ng-style="{'background-color' : color.value}" ng-model="color.value"></span>
                         </div>
                     </div>

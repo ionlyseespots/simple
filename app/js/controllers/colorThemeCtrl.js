@@ -10,9 +10,19 @@ $scope.navbarCrunch = function(newColor){
         var brightness = Less.calcBrightness(color);
         var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
     }
+    $scope.hiddennavbar[9].value = newTextColor;
     $scope.navbar[1].value = newTextColor;
     var activeColor = Less.LightDark(newColor, -20);
+    $scope.hiddennavbar[0].value = activeColor;
+    $scope.hiddennavbar[1].value = activeColor;
+    $scope.hiddennavbar[2].value = activeColor;
+    $scope.hiddennavbar[3].value = activeColor;
+    $scope.hiddennavbar[4].value = activeColor;
+    $scope.hiddennavbar[5].value = activeColor;
+    $scope.hiddennavbar[6].value = activeColor;
+    $scope.hiddennavbar[7].value = activeColor;
     $scope.navbar[2].value = activeColor;
+
     var activeBg = new Less.RGBColor(activeColor);
     if (activeBg.ok){
         var abrightness = Less.calcBrightness(activeBg);
@@ -20,7 +30,7 @@ $scope.navbarCrunch = function(newColor){
     }
     $scope.navbar[3].value = activeTextColor;
 
-}
+};
 
 $scope.buttonCrunch = function(newColor, index){
     $scope.buttons[index + 2].value = Less.LightDark(newColor, -15);
@@ -33,7 +43,93 @@ $scope.buttonCrunch = function(newColor, index){
     $scope.buttons[index + 1].value = newTextColor;
 };
 
+
 // bootstrap
+$scope.hiddennavbar = [
+    {
+        "name":             "Navbar Hover",
+        "parentclass":      "container .navbar-nav",
+        "parentelement":    "li.active",
+        "element":          "a:hover",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Focus",
+        "parentclass":      "container .navbar-nav",
+        "parentelement":    "li.active",
+        "element":          "a:focus",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Open",
+        "parentclass":      "navbar-default .navbar-nav .open",
+        "element":          "> a",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Open Hover",
+        "parentclass":      "navbar-default .navbar-nav .open",
+        "element":          "> a:hover",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Open Focus",
+        "parentclass":      "navbar-default .navbar-nav .open",
+        "element":          "> a:focus",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Dropdown Hover",
+        "parentclass":      "navbar-nav li.dropdown li",
+        "element":          "> a:hover",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Dropdown Focus",
+        "parentclass":      "navbar-nav li.dropdown li",
+        "element":          "> a:focus",
+        "property":         "background-color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Arrow",
+        "parentclass":      "navbar .container .navbar-nav",
+        "parentelement":    "li.active",
+        "class":            "fa-caret-down",
+        "property":         "color",
+        "value":            "#359FD5",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Dropdown Text",
+        "parentclass":      "navbar-nav li.dropdown li",
+        "element":          "> a",
+        "property":         "color",
+        "value":            "#333333",
+        "important":        ""
+    },
+    {
+        "name":             "Navbar Dropdown Hover Text",
+        "parentclass":      "navbar-nav li.dropdown li",
+        "element":          "> a:hover",
+        "property":         "color",
+        "value":            "#FFFFFF",
+        "important":        ""
+    }
+];
 $scope.navbar = [
     {
         "name":             "Default background",
@@ -458,6 +554,7 @@ function format(d){
 // save json to css
 $scope.save = function() {
     $scope.file = "";
+    format($scope.hiddennavbar);
     format($scope.navbar);
     format($scope.scaffolding);
     format($scope.buttons);

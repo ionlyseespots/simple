@@ -43,6 +43,40 @@ $scope.buttonCrunch = function(newColor, index){
     $scope.buttons[index + 1].value = newTextColor;
 };
 
+$scope.wellCrunch = function(newColor, index, type){
+    if (type == 'category'){
+        $scope.categorywells[index].value = newColor;
+        $scope.categorywells[index + 2].value = Less.LightDark(newColor, -15);
+        var color = new Less.RGBColor(newColor);
+        if (color.ok){
+            var brightness = Less.calcBrightness(color);
+            var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+        }
+        $scope.categorywells[index + 1].value = newTextColor;
+    }
+    else {
+        $scope.productwells[index].value = newColor;
+        $scope.productwells[index + 2].value = Less.LightDark(newColor, -15);
+        var color = new Less.RGBColor(newColor);
+        if (color.ok){
+            var brightness = Less.calcBrightness(color);
+            var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+        }
+        $scope.productwells[index + 1].value = newTextColor;
+    }
+};
+
+$scope.panelCrunch = function(newColor, index){
+    $scope.panels[index].value = newColor;
+    var color = new Less.RGBColor(newColor);
+    if (color.ok){
+        var brightness = Less.calcBrightness(color);
+        var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+    }
+    $scope.panels[index + 1].value = newTextColor;
+};
+
+
 
 // bootstrap
 $scope.hiddennavbar = [

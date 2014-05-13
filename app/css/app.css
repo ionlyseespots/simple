@@ -2,8 +2,9 @@
 
 body {
     background-color: #fff;
+overflow-x: hidden;
 }
-
+html {overflow-y: auto; }
 div {position: static;}
 /*.container-simple-editor {*/
 /*width: 750px;*/

@@ -128,6 +128,14 @@ $scope.hiddennavbar = [
         "property":         "color",
         "value":            "#FFFFFF",
         "important":        ""
+    },
+    {
+        "name":             "Navbar Cart Default Circle",
+        "parentclass":      ".navbar .container .navbar-nav.pull-right li",
+        "element":          "a i:first-of-type",
+        "property":         "border-color",
+        "value":            "#FFFFFF",
+        "important":        ""
     }
 ];
 $scope.navbar = [

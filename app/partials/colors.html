@@ -98,24 +98,24 @@
                         Buttons
                     </h3>
                     <div class="buttons" ng-repeat="color in buttons" ng-show="([0,4,8,12,16,20].indexOf($index) > -1)">
-                        <p ng-show=" {{$index == 0}}" class="col-xs-12 text-info">
-                            Primary button
-                        </p>
-                        <p ng-show=" {{$index == 4}}" class="col-xs-12 text-info">
-                            Default button
-                        </p>
-                        <p ng-show=" {{$index == 8}}" class="col-xs-12 text-info">
-                            Info button
-                        </p>
-                        <p ng-show=" {{$index == 12}}" class="col-xs-12 text-info">
-                            Success button
-                        </p>
-                        <p ng-show=" {{$index == 16}}"  class="col-xs-12 text-info">
-                            Warning button
-                        </p>
-                        <p ng-show=" {{$index == 20}}"  class="col-xs-12 text-info">
-                            Danger button
-                        </p>
+                        <!--<p ng-show=" {{$index == 0}}" class="col-xs-12 text-info">-->
+                            <!--Primary button-->
+                        <!--</p>-->
+                        <!--<p ng-show=" {{$index == 4}}" class="col-xs-12 text-info">-->
+                            <!--Default button-->
+                        <!--</p>-->
+                        <!--<p ng-show=" {{$index == 8}}" class="col-xs-12 text-info">-->
+                            <!--Info button-->
+                        <!--</p>-->
+                        <!--<p ng-show=" {{$index == 12}}" class="col-xs-12 text-info">-->
+                            <!--Success button-->
+                        <!--</p>-->
+                        <!--<p ng-show=" {{$index == 16}}"  class="col-xs-12 text-info">-->
+                            <!--Warning button-->
+                        <!--</p>-->
+                        <!--<p ng-show=" {{$index == 20}}"  class="col-xs-12 text-info">-->
+                            <!--Danger button-->
+                        <!--</p>-->
                         <label>{{color.name}}</label>
                         <div class="input-group">
                             <input colorpicker colorpicker-position="bottom" colorpicker-fixed-position="true" colorpicker-parent="true" type="text" ng-model="color.value" ng-change="buttonCrunch(color.value, $index)" />
@@ -203,7 +203,7 @@
                                     <li class="cart">
                                         <a class="cart" href="#.#">
                                             <span class="badge">2</span>
-                                            <i ng-repeat="color in navbar | filter: { name: 'Default text' }" ng-style="{'color' : color.value}" class="fa fa-shopping-cart"></i>
+                                         <i ng-repeat="color in navbar | filter: { name: 'Default text' }" ng-style="{'color' : color.value}" class="fa fa-shopping-cart"></i>
                                         </a>
                                     </li>
                                 </ul>

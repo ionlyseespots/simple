@@ -1,0 +1,62 @@
+<section class="col-xs-3 col-collapse" style="border-right: 1px solid rgba(0, 0, 0, 0.1); bottom: 0; left: 0; position: fixed; top: 0;">
+    <form>
+        <div class="form-simple">
+            <div  style=" border-bottom: 1px solid rgba(0, 0, 0, 0.1); height: 110px; left: 0; padding: 10px;position: absolute; right: 0; top: 0;">
+                <h4 style="padding: 0;text-align: center;">
+                    Select a product theme
+                </h4>
+                <select ng-model="themeName" style="width: 100%;  border: 1px solid #E5E5E5; border-radius: 4px; color: #666666; min-height: 20px; padding: 4px 6px;;">
+                    <option ng-repeat="file in themeNames" value="{{file.theme}}">{{file.theme}}</option>
+                </select>
+                <!--Currently viewing: {{themeName}}-->
+            </div>
+            <div style="bottom: 253px;  left: 0; overflow-y: scroll; padding: 10px; position: absolute;  right: 0; top: 110px;">
+
+            </div>
+            <div style=" border-top: 1px solid rgba(0, 0, 0, 0.1); background-color:#fff; bottom: 0;height: 253px;left: 0; position: absolute; right: 0;">
+                <div class="well clearfix" style="background-color: #fff;">
+
+                    <div class="btn-group btn-group-justified" style="margin-top: 20px;">
+                        <div class="btn-group">
+                            <button class="btn btn-default" ng-click="save()">Save</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default" ng-click="resetColor()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<section class="container-simple-editor clearfix col-xs-9 col-collapse col-xs-offset-3">
+<div class="container">
+    <div class="navbar navbar-default navbar-fixed-top col-xs-9 col-collapse col-xs-offset-3" role="navigation" style="background-color:#F8F8F8;border-color:#E7E7E7;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:#777777;">Theme Editor</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li style="padding: 0 5px;" >
+                        <a href="#/view1"  style="color:#777777;">Colors</a>
+                    </li>
+                    <li style="padding: 0 5px;" class="active">
+                        <a href="#/view2"  style="color:#555;background-color:#E7E7E7;">Products</a>
+                    </li>
+                </ul>
+                <ul class="navbar-right">
+                    <li>
+                        <button class="btn btn-default" style="margin: 10px 0;" ng-click="goFullscreen()"><i class="fa fa-expand"></i></button>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </div>
+</div>
+<div class="row" style="margin: 75px 0;">
+    <div class="col-xs-11 col-xs-offset-1">
+
+    </div>
+</div>
+</section>

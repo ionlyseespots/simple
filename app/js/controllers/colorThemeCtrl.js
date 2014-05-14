@@ -11,6 +11,8 @@ $scope.navbarCrunch = function(newColor){
         var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
     }
     $scope.hiddennavbar[9].value = newTextColor;
+    $scope.hiddennavbar[10].value = newTextColor;
+    $scope.hiddennavbar[12].value = newTextColor;
     $scope.navbar[1].value = newTextColor;
     var activeColor = Less.LightDark(newColor, -20);
     $scope.hiddennavbar[0].value = activeColor;
@@ -21,6 +23,7 @@ $scope.navbarCrunch = function(newColor){
     $scope.hiddennavbar[5].value = activeColor;
     $scope.hiddennavbar[6].value = activeColor;
     $scope.hiddennavbar[7].value = activeColor;
+    $scope.hiddennavbar[11].value = activeColor;
     $scope.navbar[2].value = activeColor;
 
     var activeBg = new Less.RGBColor(activeColor);
@@ -164,10 +167,24 @@ $scope.hiddennavbar = [
         "important":        ""
     },
     {
-        "name":             "Navbar Cart Default Circle",
+        "name":             "Navbar Checkout Circle",
         "parentclass":      ".navbar .container .navbar-nav.pull-right li",
         "element":          "a i:first-of-type",
         "property":         "border-color",
+        "value":            "#FFFFFF",
+        "important":        ""
+    },
+    {
+        "name":             "Badge Background",
+        "class":            "badge",
+        "property":         "background-color",
+        "value":            "#0C2A3A",
+        "important":        ""
+    },
+    {
+        "name":             "Badge Text",
+        "class":            "badge",
+        "property":         "color",
         "value":            "#FFFFFF",
         "important":        ""
     }
@@ -224,6 +241,16 @@ $scope.scaffolding = [
         "element":          "body",
         "property":         "background-color",
         "value":            "#F0F0F0",
+        "important":        ""
+    },
+    {
+        "name":             "Body Text",
+        "parentclass":      "",
+        "childclass":       "",
+        "parentelement":    "",
+        "element":          "body",
+        "property":         "color",
+        "value":            "#333333",
         "important":        ""
     },
     {
@@ -430,7 +457,7 @@ $scope.jumbotron = [
         "important":        ""
     },
     {
-        "name":             "Buyer Co",
+        "name":             "Brand Text",
         "class":            "jumbotron",
         "element":          "h2",
         "property":         "color",
@@ -609,6 +636,7 @@ $scope.save = function() {
 };
 
 // reset json to original values
+$scope.resethiddennavbar = angular.copy($scope.hiddennavbar);
 $scope.resetnavbar = angular.copy($scope.navbar);
 $scope.resetscaffolding = angular.copy($scope.scaffolding);
 $scope.resetbuttons = angular.copy($scope.buttons);
@@ -618,6 +646,7 @@ $scope.resetwells = angular.copy($scope.wells);
 $scope.resetcategorywells = angular.copy($scope.categorywells);
 $scope.resetproductwells = angular.copy($scope.productwells);
 $scope.resetColor = function() {
+    $scope.hiddennavbar = angular.copy($scope.resethiddennavbar);
     $scope.navbar = angular.copy($scope.resetnavbar);
     $scope.scaffolding = angular.copy($scope.resetscaffolding);
     $scope.buttons = angular.copy($scope.resetbuttons);

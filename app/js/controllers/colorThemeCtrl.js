@@ -9,10 +9,11 @@ $scope.navbarCrunch = function(newColor){
     if (color.ok){
         var brightness = Less.calcBrightness(color);
         var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+        var newBadgeTextColor = (brightness < 130) ? "#000000" : "#FFFFFF";
     }
     $scope.hiddennavbar[9].value = newTextColor;
     $scope.hiddennavbar[10].value = newTextColor;
-    $scope.hiddennavbar[12].value = newTextColor;
+    $scope.hiddennavbar[12].value = newBadgeTextColor;
     $scope.navbar[1].value = newTextColor;
     var activeColor = Less.LightDark(newColor, -20);
     $scope.hiddennavbar[0].value = activeColor;
@@ -23,7 +24,7 @@ $scope.navbarCrunch = function(newColor){
     $scope.hiddennavbar[5].value = activeColor;
     $scope.hiddennavbar[6].value = activeColor;
     $scope.hiddennavbar[7].value = activeColor;
-    $scope.hiddennavbar[11].value = activeColor;
+
     $scope.navbar[2].value = activeColor;
 
     var activeBg = new Less.RGBColor(activeColor);
@@ -31,6 +32,7 @@ $scope.navbarCrunch = function(newColor){
         var abrightness = Less.calcBrightness(activeBg);
         var activeTextColor = (abrightness < 130) ? "#FFFFFF" : "#000000";
     }
+    $scope.hiddennavbar[11].value = activeTextColor;
     $scope.navbar[3].value = activeTextColor;
 
 };

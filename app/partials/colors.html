@@ -116,13 +116,15 @@
             </div>
             <div style=" border-top: 1px solid rgba(0, 0, 0, 0.1); background-color:#fff; bottom: 0;height: 253px;left: 0; position: absolute; right: 0;">
                 <div class="well clearfix" style="background-color: #fff;">
-                    <p class="text-info">Generated color palette</p>
+                    <p class="text-info">Generated palette</p>
                     <div ng-repeat="color in navbar | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <div ng-repeat="color in scaffolding | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <div ng-repeat="color in panels | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <div ng-repeat="color in categorywells | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <div ng-repeat="color in productwells | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <div ng-repeat="color in jumbotron | filter: { property: 'background-color' }" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
+                    <hr />
+                    <div ng-repeat="color in buttons | filter: { property: 'background-color' }" ng-hide="$odd" class="pull-left " ng-style="{'background-color' : color.value}" ng-model="color.value" style="border: 1px solid #F0F0F0; margin: 1px;display: inline-block;width: 25px; height: 25px;"></div>
                     <hr />
                     <div class="btn-group btn-group-justified" style="margin-top: 20px;">
                         <div class="btn-group">
@@ -218,7 +220,7 @@
                                 </ul>
                             </nav>
                             <div class="col-xs-12 col-collapse">
-                                <div ng-repeat="color in panels | filter: { name: 'Primary panel header background' }">
+                                <div ng-repeat="color in panels | filter: { name: 'Primary panel header background' }" data-toggle="tooltip" title="Key active">
                                     <div class="panel {{color.parentclass}}">
                                         <div class="{{color.childclass}}">
                                             <h3 ng-style="{'background-color' : color.value}" class="text-center {{color.class}}">

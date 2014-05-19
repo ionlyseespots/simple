@@ -1,7 +1,5 @@
 Simple.app.controller("colorThemeCtrl", function($scope, Less){
-var primaryButtonBackgroundColor = "#0C2A3A";
-var primaryButtonBorderColor = Less.LightDark(primaryButtonBackgroundColor, -5);
-var primaryButtonHoverColor = Less.LightDark(primaryButtonBackgroundColor, -10);
+
 
 $scope.navbarCrunch = function(newColor){
     $scope.navbar[0].value = newColor;
@@ -170,7 +168,7 @@ $scope.hiddennavbar = [
     },
     {
         "name":             "Navbar Checkout Circle",
-        "parentclass":      ".navbar .container .navbar-nav.pull-right li",
+        "parentclass":      "navbar .container .navbar-nav.pull-right li",
         "element":          "a i:first-of-type",
         "property":         "border-color",
         "value":            "#FFFFFF",
@@ -212,7 +210,7 @@ $scope.navbar = [
         "name":             "Active background",
         "parentclass":      "container .navbar-nav",
         "parentelement":    "li.active",
-        "element":          "a",
+        "element":          "> a",
         "property":         "background-color",
         "value":            "#359FD5",
         "important":        ""
@@ -221,14 +219,14 @@ $scope.navbar = [
         "name":             "Active text",
         "parentclass":      "container .navbar-nav",
         "parentelement":    "li.active",
-        "element":          "a",
+        "element":          "> a",
         "property":         "color",
         "value":            "#FFFFFF",
         "important":        ""
     },
     {
         "name":             "Border",
-        "class":            "navbar-default",
+        "class":            "navbar-default, .dropdown-mega",
         "property":         "border-color",
         "value":            "#FFFFFF",
         "important":        ""
@@ -285,7 +283,7 @@ $scope.buttons = [
         "name":         "Primary background",
         "class":        "btn-primary",
         "property":     "background-color",
-        "value":        primaryButtonBackgroundColor,
+        "value":        "#0C2A3A",
         "important":    ""
     },
     {
@@ -299,14 +297,14 @@ $scope.buttons = [
         "name":         "Primary border",
         "class":        "btn-primary",
         "property":     "border-color",
-        "value":        primaryButtonBorderColor,
+        "value":        "#081B24",
         "important":    ""
     },
     {
         "name":         "Primary hover",
         "class":        "btn-primary:hover",
         "property":     "background-color",
-        "value":        primaryButtonHoverColor,
+        "value":        "#051118",
         "important":    ""
     },
     {
@@ -321,7 +319,7 @@ $scope.buttons = [
         "class":        "btn-default, .btn-default:hover",
         "property":     "color",
         "value":        "#333333",
-        "important":    " "
+        "important":    ""
     },
     {
         "name":         "Default border",
@@ -547,6 +545,7 @@ $scope.wells = [
 $scope.categorywells = [
     {
         "name":             "Default background",
+        "parentclass":      "panel-category-list",
         "class":            "well",
         "property":         "background-color",
         "value":            "#FFFFFF",
@@ -554,13 +553,15 @@ $scope.categorywells = [
     },
     {
         "name":             "Category Well Text",
-        "class":            "well",
+        "parentclass":      "panel-category-list",
+        "class":            "well h5",
         "property":         "color",
         "value":            "#333333",
         "important":        ""
     },
     {
         "name":             "Border",
+        "parentclass":      "panel-category-list",
         "class":            "well",
         "property":         "border-color",
         "value":            "#F0F0F0",
@@ -570,6 +571,7 @@ $scope.categorywells = [
 $scope.productwells = [
     {
         "name":             "Default background",
+        "parentclass":      "panel-product-list",
         "class":            "well",
         "property":         "background-color",
         "value":            "#FFFFFF",
@@ -577,6 +579,7 @@ $scope.productwells = [
     },
     {
         "name":             "Product Well Text",
+        "parentclass":      "panel-product-list",
         "class":            "well",
         "property":         "color",
         "value":            "#333333",
@@ -584,6 +587,7 @@ $scope.productwells = [
     },
     {
         "name":             "Border",
+        "parentclass":      "panel-product-list",
         "class":            "well",
         "property":         "border-color",
         "value":            "#F0F0F0",
@@ -631,7 +635,7 @@ $scope.save = function() {
     format($scope.buttons);
     format($scope.jumbotron);
     format($scope.panels);
-    format($scope.wells);
+    // format($scope.wells);
     format($scope.categorywells);
     format($scope.productwells);
     console.log($scope.file);
@@ -644,9 +648,10 @@ $scope.resetscaffolding = angular.copy($scope.scaffolding);
 $scope.resetbuttons = angular.copy($scope.buttons);
 $scope.resetpanels = angular.copy($scope.panels);
 $scope.resetjumbotron = angular.copy($scope.jumbotron);
-$scope.resetwells = angular.copy($scope.wells);
+// $scope.resetwells = angular.copy($scope.wells);
 $scope.resetcategorywells = angular.copy($scope.categorywells);
 $scope.resetproductwells = angular.copy($scope.productwells);
+
 $scope.resetColor = function() {
     $scope.hiddennavbar = angular.copy($scope.resethiddennavbar);
     $scope.navbar = angular.copy($scope.resetnavbar);
@@ -654,9 +659,10 @@ $scope.resetColor = function() {
     $scope.buttons = angular.copy($scope.resetbuttons);
     $scope.panels = angular.copy($scope.resetpanels);
     $scope.jumbotron = angular.copy($scope.resetjumbotron);
-    $scope.wells = angular.copy($scope.resetwells);
+    // $scope.wells = angular.copy($scope.resetwells);
     $scope.categorywells = angular.copy($scope.resetcategorywells);
     $scope.productwells = angular.copy($scope.resetproductwells);
 };
+
 });
 

@@ -159,7 +159,7 @@
                     <div class="container-simple" ng-repeat="color in scaffolding | filter: { name: 'Body background' }" ng-style="{'background-color' : color.value}">
                         <nav ng-repeat="color in navbar | filter: { name: 'Default background' }" ng-style="{'background-color' : color.value}" class="navbar {{color.class}}" role="navigation">
                             <section>
-                                <div class="container navbar-simple-border" ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}">
+                                <div class="container navbar-simple-border" ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}" style="border-width: 0 0 1px;">
                                     <ul class="nav navbar-nav pull-left">
                                         <li ng-repeat="color in navbar | filter: { name: 'Active background' }" class="{{color.class}}">
                                             <a href="#.#" ng-style="{'background-color' : color.value}">

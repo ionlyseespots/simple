@@ -81,6 +81,13 @@ $scope.panelCrunch = function(newColor, index){
     $scope.panels[index + 1].value = newTextColor;
 };
 
+$scope.jumboCrunch = function(value){
+    if (value == 'block'){
+        $scope.jumbotron[2].value = '-45px 5px 45px';
+    } else {
+        $scope.jumbotron[2].value = '0 0 45px';
+    }
+};
 
 
 // bootstrap
@@ -231,6 +238,13 @@ $scope.navbar = [
         "class":            "navbar-default",
         "property":         "border-color",
         "value":            "#FFFFFF",
+        "important":        ""
+    },
+    {
+        "name":             "Mega Nav",
+        "class":            "navbar .dropdown-mega",
+        "property":         "display",
+        "value":            "block",
         "important":        ""
     }
 ];
@@ -464,6 +478,13 @@ $scope.jumbotron = [
         "element":          "h2",
         "property":         "color",
         "value":            "#333333",
+        "important":        ""
+    },
+    {
+        "name":             "Brand margins",
+        "class":            "jumbotron",
+        "property":         "margin",
+        "value":            "-45px 5px 45px",
         "important":        ""
     }
 ];

@@ -28,6 +28,15 @@
                             <span class="input-group-addon"  ng-style="{'background-color' : color.value}" ng-model="color.value"></span>
                         </div>
                     </div>
+                    <div>
+                        <div class="checkbox">
+                            <label class="checkbox">
+                                <input style="min-height: 0;" type="checkbox" ng-model="navbar[5].value" ng-true-value="block" ng-false-value="none" ng-change="jumboCrunch(navbar[5].value)"/>
+                                Show Mega Nav
+                            </label>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="row"  ng-show="colorSection == 'branding'" >
                     <h3 class="text-info">
@@ -192,7 +201,7 @@
                                 </div>
                             </section>
                         </nav>
-                        <div style="position: relative; height: 40px;">
+                        <div style="position: relative; height: 40px;" ng-show="navbar[5].value == 'block'">
                             <nav ng-repeat="color in navbar | filter: { name: 'Border' }" ng-style="{'border-color' : color.value}" class="text-center" style="position: absolute; left: 5px; right: 5px; top: 0;border-bottom: 1px solid #FFFFFF;padding: 0 10px; height: 40px;">
                                 <a href="#.#" class="text-center">
                                     <i ng-repeat="color in scaffolding | filter: { name: 'Primary text' }" ng-style="{'color' : color.value}" class="{{color.class}} fa fa-angle-down" style="font-weight: bold;font-size: 18px; padding: 10px;"></i>

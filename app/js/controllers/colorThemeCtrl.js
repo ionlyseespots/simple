@@ -627,7 +627,7 @@ function format(d){
 }
 
 // save json to css
-$scope.save = function() {
+    $scope.save = function() {
     $scope.file = "";
     format($scope.hiddennavbar);
     format($scope.navbar);

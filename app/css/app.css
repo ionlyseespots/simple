@@ -1,35 +1,30 @@
-/* cuurrently, app.css inherits many styles from the compiled less bootstrap-451.css file */
+html {overflow-y:scroll; }
 
-body {
-    background-color: #fff;
-    overflow-x: hidden;
-}
-html {overflow-y: auto; }
 div {position: static;}
-/*.container-simple-editor {*/
-/*width: 750px;*/
-/*margin: 15px auto;*/
-/*position: relative;*/
-/*}*/
+
 
 .container-phone {
     border: 1px solid #d6d6d6;
 }
 
 label {font-size: 11px;}
-/* going to make the phone area toggable and expand design, remove comments below if you want a css phone*/
+
 .container-phone {
     background-color:#F0F0F0;
     border: 5px solid #fff;
     border-top: 75px solid #fff;
-    margin: 75px 0 0 ;
+    margin: 0 ;
     border-bottom: 75px solid #fff;
     border-radius: 45px;
     -webkit-box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.35);
     -moz-box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.35);
     box-shadow: 0px 1px 12px 1px rgba(0,0,0,0.35);
-    position: fixed;
+
+
 }
+
+.container-simple {overflow-x: hidden;}
+.simple-view div {position: relative;}
 
 .container-phone:after {
     content: "";
@@ -154,3 +149,6 @@ label {font-size: 11px;}
 .dropdown {
     position: absolute !important;
 }
+
+
+/* mine */

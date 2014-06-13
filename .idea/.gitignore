@@ -1,0 +1,12 @@
+.idea
+logs/*
+!.gitkeep
+config/Four51APIAppName.js
+*source.js
+*resources.js
+*source.css
+.orig
+node_modules/*
+*source.js
+*resources.js
+*source.css

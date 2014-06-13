@@ -1,6 +1,26 @@
+
 html {overflow-y:scroll; }
 
-div {position: static;}
+section {position: relative;}
+
+
+
+
+
+
+.panel-heading {
+    padding: 0
+}
+
+.panel-title {
+    padding: 10px 15px;
+}
+
+.container-fluid {
+    margin-bottom: 20px;
+}
+
+
 
 
 .container-phone {

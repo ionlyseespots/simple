@@ -65,7 +65,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "li.active",
             "element":          "a:hover",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -74,7 +74,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "li.active",
             "element":          "a:focus",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -82,7 +82,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-default .navbar-nav .open",
             "element":          "> a",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -90,7 +90,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-default .navbar-nav .open",
             "element":          "> a:hover",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -98,7 +98,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-default .navbar-nav .open",
             "element":          "> a:focus",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -106,7 +106,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-nav li.dropdown li",
             "element":          "> a:hover",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -114,16 +114,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-nav li.dropdown li",
             "element":          "> a:focus",
             "property":         "background-color",
-            "value":            "#359FD5",
-            "important":        ""
-        },
-        {
-            "name":             "Navbar Arrow",
-            "parentclass":      "navbar .container .navbar-nav",
-            "parentelement":    "li.active",
-            "class":            "fa-caret-down",
-            "property":         "color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -139,22 +130,14 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentclass":      "navbar-nav li.dropdown li",
             "element":          "> a:hover",
             "property":         "color",
-            "value":            "#FFFFFF",
-            "important":        ""
-        },
-        {
-            "name":             "Navbar Checkout Circle",
-            "parentclass":      "navbar .container .navbar-nav.pull-right li",
-            "element":          "a i:first-of-type",
-            "property":         "border-color",
-            "value":            "#FFFFFF",
+            "value":            "#333333",
             "important":        ""
         },
         {
             "name":             "Badge Background",
             "class":            "badge",
             "property":         "background-color",
-            "value":            "#0C2A3A",
+            "value":            "#999999",
             "important":        ""
         },
         {
@@ -170,7 +153,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":             "Default background",
             "class":            "navbar-default",
             "property":         "background-color",
-            "value":            "#50ACDB",
+            "value":            "#f8f8f8",
             "important":        ""
         },
         {
@@ -179,7 +162,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "li",
             "element":          "a",
             "property":         "color",
-            "value":            "#FFFFFF",
+            "value":            "#777777",
             "important":        ""
         },
         {
@@ -188,7 +171,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "li.active",
             "element":          "> a",
             "property":         "background-color",
-            "value":            "#359FD5",
+            "value":            "#E7E7E7",
             "important":        ""
         },
         {
@@ -197,14 +180,14 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "li.active",
             "element":          "> a",
             "property":         "color",
-            "value":            "#FFFFFF",
+            "value":            "#555555",
             "important":        ""
         },
         {
             "name":             "Border",
             "class":            "navbar-default, .dropdown-mega",
             "property":         "border-color",
-            "value":            "#FFFFFF",
+            "value":            "#E7E7E7",
             "important":        ""
         }
     ];
@@ -216,7 +199,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "",
             "element":          "body",
             "property":         "background-color",
-            "value":            "#F0F0F0",
+            "value":            "#fff",
             "important":        ""
         },
         {
@@ -233,7 +216,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":             "Primary text & Primary icons",
             "class":            "text-primary",
             "property":         "color",
-            "value":            "#0C2A3A",
+            "value":            "#428BCA",
             "important":        ""
         },
         {
@@ -250,7 +233,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "body",
             "element":          "a",
             "property":         "color",
-            "value":            "#0C2A3A",
+            "value":            "#428BCA",
             "important":        ""
         }
     ];
@@ -259,7 +242,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":         "Primary background",
             "class":        "btn-primary",
             "property":     "background-color",
-            "value":        "#0C2A3A",
+            "value":        "#428bca",
             "important":    ""
         },
         {
@@ -280,7 +263,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":         "Primary hover",
             "class":        "btn-primary:hover",
             "property":     "background-color",
-            "value":        "#051118",
+            "value":        "#3276b1",
             "important":    ""
         },
         {
@@ -429,7 +412,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":             "Brand background",
             "class":            "jumbotron",
             "property":         "background-color",
-            "value":            "#FFFFFF",
+            "value":            "#EEEEEE",
             "important":        ""
         },
         {
@@ -448,7 +431,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "childclass":       "panel-heading",
             "class":            "panel-title",
             "property":         "background-color",
-            "value":            "#0C2A3A",
+            "value":            "#428bca",
             "important":        ""
         },
         {

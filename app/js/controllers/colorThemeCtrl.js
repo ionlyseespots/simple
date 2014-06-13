@@ -1,5 +1,6 @@
 Simple.app.controller("colorThemeCtrl", function($scope, Less){
 
+
     $scope.navbarCrunch = function(newColor){
         $scope.navbar[0].value = newColor;
         var color = new Less.RGBColor(newColor);
@@ -43,6 +44,29 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
         }
         $scope.buttons[index + 1].value = newTextColor;
+    };
+
+    $scope.wellCrunch = function(newColor, index, type){
+        if (type == 'category'){
+            $scope.categorywells[index].value = newColor;
+            $scope.categorywells[index + 2].value = Less.LightDark(newColor, -15);
+            var color = new Less.RGBColor(newColor);
+            if (color.ok){
+                var brightness = Less.calcBrightness(color);
+                var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+            }
+            $scope.categorywells[index + 1].value = newTextColor;
+        }
+        else {
+            $scope.productwells[index].value = newColor;
+            $scope.productwells[index + 2].value = Less.LightDark(newColor, -15);
+            var color = new Less.RGBColor(newColor);
+            if (color.ok){
+                var brightness = Less.calcBrightness(color);
+                var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+            }
+            $scope.productwells[index + 1].value = newTextColor;
+        }
     };
 
     $scope.panelCrunch = function(newColor, index){
@@ -118,6 +142,15 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "important":        ""
         },
         {
+            "name":             "Navbar Arrow",
+            "parentclass":      "navbar .container .navbar-nav",
+            "parentelement":    "li.active",
+            "class":            "fa-caret-down",
+            "property":         "color",
+            "value":            "#E7E7E7",
+            "important":        ""
+        },
+        {
             "name":             "Navbar Dropdown Text",
             "parentclass":      "navbar-nav li.dropdown li",
             "element":          "> a",
@@ -131,6 +164,14 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "element":          "> a:hover",
             "property":         "color",
             "value":            "#333333",
+            "important":        ""
+        },
+        {
+            "name":             "Navbar Checkout Circle",
+            "parentclass":      "navbar .container .navbar-nav.pull-right li",
+            "element":          "a i:first-of-type",
+            "property":         "border-color",
+            "value":            "#FFFFFF",
             "important":        ""
         },
         {
@@ -199,7 +240,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "parentelement":    "",
             "element":          "body",
             "property":         "background-color",
-            "value":            "#fff",
+            "value":            "#ffffff",
             "important":        ""
         },
         {
@@ -242,7 +283,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             "name":         "Primary background",
             "class":        "btn-primary",
             "property":     "background-color",
-            "value":        "#428bca",
+            "value":        "#428BCA",
             "important":    ""
         },
         {
@@ -500,6 +541,63 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         }
     ];
 
+// custom
+    $scope.categorywells = [
+        {
+            "name":             "Default background",
+            "parentclass":      "panel-category-list",
+            "class":            "well",
+            "property":         "background-color",
+            "value":            "#FFFFFF",
+            "important":        ""
+        },
+        {
+            "name":             "Category Well Text",
+            "parentclass":      "panel-category-list",
+            "class":            "well h5",
+            "property":         "color",
+            "value":            "#333333",
+            "important":        ""
+        },
+        {
+            "name":             "Border",
+            "parentclass":      "panel-category-list",
+            "class":            "well",
+            "property":         "border-color",
+            "value":            "#F0F0F0",
+            "important":        ""
+        }
+    ];
+    $scope.productwells = [
+        {
+            "name":             "Default background",
+            "parentclass":      "panel-product-list",
+            "class":            "well",
+            "property":         "background-color",
+            "value":            "#FFFFFF",
+            "important":        ""
+        },
+        {
+            "name":             "Product Well Text",
+            "parentclass":      "panel-product-list",
+            "class":            "well",
+            "property":         "color",
+            "value":            "#333333",
+            "important":        ""
+        },
+        {
+            "name":             "Border",
+            "parentclass":      "panel-product-list",
+            "class":            "well",
+            "property":         "border-color",
+            "value":            "#F0F0F0",
+            "important":        ""
+        }
+    ];
+
+
+
+
 // color palette lib
     $scope.themeNames = [{
         theme: "Theme 1"
@@ -538,6 +636,8 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         format($scope.jumbotron);
         format($scope.panels);
         // format($scope.wells);
+        format($scope.categorywells);
+        format($scope.productwells);
         console.log($scope.file);
     };
 
@@ -548,8 +648,9 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
     $scope.resetbuttons = angular.copy($scope.buttons);
     $scope.resetpanels = angular.copy($scope.panels);
     $scope.resetjumbotron = angular.copy($scope.jumbotron);
-    $scope.resetfile = angular.copy($scope.file);
 // $scope.resetwells = angular.copy($scope.wells);
+    $scope.resetcategorywells = angular.copy($scope.categorywells);
+    $scope.resetproductwells = angular.copy($scope.productwells);
 
     $scope.resetColor = function() {
         $scope.hiddennavbar = angular.copy($scope.resethiddennavbar);
@@ -558,8 +659,9 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.buttons = angular.copy($scope.resetbuttons);
         $scope.panels = angular.copy($scope.resetpanels);
         $scope.jumbotron = angular.copy($scope.resetjumbotron);
-        $scope.file = angular.copy($scope.resetfile);
         // $scope.wells = angular.copy($scope.resetwells);
+        $scope.categorywells = angular.copy($scope.resetcategorywells);
+        $scope.productwells = angular.copy($scope.resetproductwells);
     };
 
 });

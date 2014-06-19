@@ -78,6 +78,7 @@ label {font-size: 11px;}
     width: 320px;
     border-top: 1px solid #F0F0F0;
     border-bottom: 1px solid #F0F0F0;
+    border-left: 1px solid #F0F0F0;
 }
 
 .container-simple-well {border: none;}
@@ -89,6 +90,8 @@ label {font-size: 11px;}
 
 .container-simple .navbar-simple-border {
     border: 1px solid;
+    clear: both;
+    overflow: hidden;
 }
 
 .container-simple .buttons-simple-border {

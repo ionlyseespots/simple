@@ -1,5 +1,34 @@
 Simple.app.controller("colorThemeCtrl", function($scope, Less){
 
+    // monotone helpers
+    $scope.monoCrunch = function(newColor, index){
+        $scope.panels[index + 2].value =  Less.LightDark(newColor, 75);
+        $scope.panels[index + 5].value =  Less.LightDark(newColor, 75);
+        var color = new Less.RGBColor(newColor);
+        if (color.ok){
+            var brightness = Less.calcBrightness(color);
+            var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+        }
+        $scope.panels[index + 3].value = newTextColor;
+
+
+    };
+
+    $scope.jumboCrunch = function(newColor){
+        $scope.jumbotron[0].value = Less.LightDark(newColor, - 20);
+        var color = new Less.RGBColor(newColor);
+        if (color.ok){
+            var brightness = Less.calcBrightness(color);
+            var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
+        }
+        $scope.jumbotron[1].value = newTextColor;
+    };
+
+    $scope.scaffoldingCrunch = function(newColor){
+        $scope.scaffolding[0].value = Less.LightDark(newColor, 99.9);
+        $scope.scaffolding[2].value = Less.LightDark(newColor, - 20);
+    };
+
 
     $scope.navbarCrunch = function(newColor){
         $scope.navbar[0].value = newColor;
@@ -79,6 +108,16 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.panels[index + 1].value = newTextColor;
     };
 
+// monotone
+    $scope.monotone = [
+        {
+            "name":         "Master Color",
+            "class":        "",
+            "property":     "",
+            "value":        "",
+            "important":    ""
+        }
+    ];
 
 
 // bootstrap

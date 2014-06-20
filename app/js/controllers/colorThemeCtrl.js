@@ -1,6 +1,9 @@
 Simple.app.controller("colorThemeCtrl", function($scope, Less){
 
-    // monotone helpers
+
+    //== LESS
+
+    //** monotone helpers
     $scope.monoCrunch = function(newColor, index){
         $scope.panels[index + 2].value =  Less.LightDark(newColor, 75);
         $scope.panels[index + 5].value =  Less.LightDark(newColor, 75);
@@ -10,10 +13,9 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
             var newTextColor = (brightness < 130) ? "#FFFFFF" : "#000000";
         }
         $scope.panels[index + 3].value = newTextColor;
-
-
     };
 
+    //** Jumbotron
     $scope.jumboCrunch = function(newColor){
         $scope.jumbotron[0].value = Less.LightDark(newColor, - 20);
         var color = new Less.RGBColor(newColor);
@@ -24,12 +26,13 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.jumbotron[1].value = newTextColor;
     };
 
+    //** Scaffolding
     $scope.scaffoldingCrunch = function(newColor){
         $scope.scaffolding[0].value = Less.LightDark(newColor, 99.9);
         $scope.scaffolding[2].value = Less.LightDark(newColor, - 20);
     };
 
-
+    //** Navbar
     $scope.navbarCrunch = function(newColor){
         $scope.navbar[0].value = newColor;
         var color = new Less.RGBColor(newColor);
@@ -51,9 +54,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.hiddennavbar[5].value = activeColor;
         $scope.hiddennavbar[6].value = activeColor;
         $scope.hiddennavbar[7].value = activeColor;
-
         $scope.navbar[2].value = activeColor;
-
         var activeBg = new Less.RGBColor(activeColor);
         if (activeBg.ok){
             var abrightness = Less.calcBrightness(activeBg);
@@ -61,9 +62,9 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         }
         $scope.hiddennavbar[11].value = activeTextColor;
         $scope.navbar[3].value = activeTextColor;
-
     };
 
+    //** Buttons
     $scope.buttonCrunch = function(newColor, index){
         $scope.buttons[index + 2].value = Less.LightDark(newColor, -15);
         $scope.buttons[index + 3].value = Less.LightDark(newColor, -20);
@@ -75,6 +76,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.buttons[index + 1].value = newTextColor;
     };
 
+    //** Wells
     $scope.wellCrunch = function(newColor, index, type){
         if (type == 'category'){
             $scope.categorywells[index].value = newColor;
@@ -98,6 +100,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         }
     };
 
+    //** Panels
     $scope.panelCrunch = function(newColor, index){
         $scope.panels[index].value = newColor;
         var color = new Less.RGBColor(newColor);
@@ -108,19 +111,10 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         $scope.panels[index + 1].value = newTextColor;
     };
 
-// monotone
-    $scope.monotone = [
-        {
-            "name":         "Master Color",
-            "class":        "",
-            "property":     "",
-            "value":        "",
-            "important":    ""
-        }
-    ];
 
+    //== Data
 
-// bootstrap
+    //** Bootstrap
     $scope.hiddennavbar = [
         {
             "name":             "Navbar Hover",
@@ -580,7 +574,16 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         }
     ];
 
-// custom
+    //** Custom
+    $scope.monotone = [
+        {
+            "name":         "Master Color",
+            "class":        "",
+            "property":     "",
+            "value":        "",
+            "important":    ""
+        }
+    ];
     $scope.categorywells = [
         {
             "name":             "Default background",
@@ -634,25 +637,24 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         }
     ];
 
-
-
-
-// color palette lib
+    // color palette lib
     $scope.themeNames = [{
         theme: "Theme 1"
     }, {
         theme: "Theme 2"
     }];
 
-
-// add new color palette to lib
+    // add new color palette to lib
     $scope.newFruit = '';
     $scope.add = function (){
         $scope.themeNames.push({theme: $scope.newFruit});
         $scope.newFruit = null;
     };
 
-// format json to css
+
+    //== Generate CSS
+
+    //** Format JSON to CSS
     function format(d){
         angular.forEach(d, function(i){
             var dot = ".";
@@ -665,7 +667,7 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         });
     }
 
-// save json to css
+    //** Save JSON
     $scope.save = function() {
         $scope.file = "";
         format($scope.hiddennavbar);
@@ -680,17 +682,16 @@ Simple.app.controller("colorThemeCtrl", function($scope, Less){
         console.log($scope.file);
     };
 
-// reset json to original values
+    //** Reset Json
     $scope.resethiddennavbar = angular.copy($scope.hiddennavbar);
     $scope.resetnavbar = angular.copy($scope.navbar);
     $scope.resetscaffolding = angular.copy($scope.scaffolding);
     $scope.resetbuttons = angular.copy($scope.buttons);
     $scope.resetpanels = angular.copy($scope.panels);
     $scope.resetjumbotron = angular.copy($scope.jumbotron);
-// $scope.resetwells = angular.copy($scope.wells);
+    // $scope.resetwells = angular.copy($scope.wells);
     $scope.resetcategorywells = angular.copy($scope.categorywells);
     $scope.resetproductwells = angular.copy($scope.productwells);
-
     $scope.resetColor = function() {
         $scope.hiddennavbar = angular.copy($scope.resethiddennavbar);
         $scope.navbar = angular.copy($scope.resetnavbar);

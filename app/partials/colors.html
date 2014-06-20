@@ -1,7 +1,7 @@
 <section class="col-md-3 col-xs-4 col-collapse" style="border-right: 1px solid rgba(0, 0, 0, 0.1); bottom: 0; left: 0; position: fixed; top: 0;">
     <form>
         <div class="form-simple">
-            <div style=" border-bottom: 1px solid rgba(0, 0, 0, 0.1); height: 150px; left: 0; padding: 10px;position: absolute; right: 0; top: 0;">
+            <div style=" border-bottom: 1px solid rgba(0, 0, 0, 0.1); height: 160px; left: 0; padding: 10px;position: absolute; right: 0; top: 0;">
                 <h4 class="text-center">Live Style Editor</h4>
                 <div class="btn-group btn-group-justified">
                     <div class="btn-group">
@@ -30,7 +30,7 @@
                         </button>
                     </div>
                 </div>
-                <div ng-repeat="color in monotone">
+                <div ng-repeat="color in monotone" style="margin-top: 15px;">
                     <label>
                         {{color.name}}
                     </label>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div style="bottom: 253px;  left: 0; overflow-x: hidden;overflow-y: scroll; padding: 10px; position: absolute;  right: 0; top: 150px;">
+            <div style="bottom: 253px;  left: 0; overflow-x: hidden;overflow-y: scroll; padding: 10px; position: absolute;  right: 0; top: 160px;">
                 <div class="row" ng-show="colorSection == 'navbar'">
                     <h3 class="text-info">
                         Nav

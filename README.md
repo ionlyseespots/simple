@@ -7,4 +7,4 @@
     The editor provides an instant preview of colors and generates a CSS rule set from JSON upon saving.
 </pre>
 
-The idea is a simple framework with a mobile view of Bootstrap on the right-hand side and colorpicker on the left-hand side;  the colors are instantly rendered on the right and output as a CSS rule set upon saving.
+The idea is a simple framework with a mobile view of Bootstrap on the right-hand side and colorpicker on the left-hand side. The colors are instantly rendered and output as a CSS rule set upon saving.

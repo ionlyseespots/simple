@@ -115,7 +115,7 @@ width: 320px;
     margin-top: 5px;
 }
 
-.form-simple input {
+.form-simple input:not([type='checkbox']) {
     color: #777;
     width: 100%;
 }
@@ -131,7 +131,6 @@ width: 320px;
 .form-simple .row label {
     margin-top: 15px;
 }
-
 
 .form-simple .well {
     border: 1px solid #d6d6d6;
